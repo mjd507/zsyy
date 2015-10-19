@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="320dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_dialog_top_selector"
+        android:gravity="center"
+        android:padding="@dimen/margins_10"
+        android:textColor="@color/text_yellow"
+        android:textSize="@dimen/text_large" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="200.0dip"
+        android:background="@drawable/shape_dialog_center_selector">
+
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margins_10"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_large" />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_dialog_bottom_selector"
+        android:gravity="center"
+        android:padding="@dimen/margins_10"
+        android:text="确定"
+        android:textColor="@color/bg_title"
+        android:textSize="@dimen/text_largest" />
+</LinearLayout>

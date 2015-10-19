@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <include layout="@layout/layout_register_step" />
+
+    <TextView
+        android:id="@+id/tv_success"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="恭喜你，挂号成功"
+        android:textColor="@color/text_yellow"
+        android:textSize="@dimen/text_largest" />
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margins_10"
+        android:background="@drawable/shape_btn_bg_selector"
+        android:minHeight="40dp"
+        android:text="确定"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/title_text_size" />
+</LinearLayout>

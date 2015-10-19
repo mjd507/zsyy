@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margins_10"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_register_type_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/item_height"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_type_1_step_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="选择科室"
+            android:textSize="@dimen/text_largest" />
+
+        <TextView
+            android:id="@+id/tv_type_1_step_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="信息确认"
+            android:textSize="@dimen/text_largest" />
+
+        <TextView
+            android:id="@+id/tv_type_1_step_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="支付"
+            android:textSize="@dimen/text_largest" />
+
+        <TextView
+            android:id="@+id/tv_type_1_step_4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="挂号成功"
+            android:textSize="@dimen/text_largest" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_register_type_2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/item_height"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_type_2_step_1"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center_horizontal"
+            android:text="选择科室"
+            android:textSize="@dimen/text_largest" />
+
+        <TextView
+            android:id="@+id/tv_type_2_step_2"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center_horizontal"
+            android:text="信息确认"
+            android:textSize="@dimen/text_largest" />
+
+        <TextView
+            android:id="@+id/tv_type_2_step_3"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center_horizontal"
+            android:text="预约成功"
+            android:textSize="@dimen/text_largest" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_register_type_3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/item_height"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_type_3_step_1"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center_horizontal"
+            android:text="选择科室"
+            android:textSize="@dimen/text_largest" />
+
+        <TextView
+            android:id="@+id/tv_type_3_step_2"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center_horizontal"
+            android:text="选择医生"
+            android:textSize="@dimen/text_largest" />
+
+        <TextView
+            android:id="@+id/tv_type_3_step_3"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center_horizontal"
+            android:text="信息确认"
+            android:textSize="@dimen/text_largest" />
+
+        <TextView
+            android:id="@+id/tv_type_3_step_4"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center_horizontal"
+            android:text="预约成功"
+            android:textSize="@dimen/text_largest" />
+    </LinearLayout>
+</LinearLayout>

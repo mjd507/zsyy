@@ -1,0 +1,393 @@
+<?xml version="1" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_register_info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <include layout="@layout/layout_register_step" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margins_10"
+            android:layout_marginRight="@dimen/margins_10"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_content_top_selector"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/item_height"
+                android:orientation="horizontal"
+                android:padding="@dimen/margins_10">
+
+                <TextView
+                    android:id="@+id/tv_faculty_or_doctor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="科室："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/tv_faculty"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/text_83"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/tv_more_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="简介"
+                    android:textColor="@color/text_yellow"
+                    android:textSize="@dimen/text_large" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-2dp"
+                android:background="@drawable/shape_content_center_selector"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/item_height"
+                android:orientation="horizontal"
+                android:padding="@dimen/margins_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="日期："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="请先选择日期"
+                    android:textColor="@color/text_83"
+                    android:textSize="@dimen/text_large" />
+
+                <ImageView
+                    android:id="@+id/iv_date_pick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:padding="@dimen/margins_10"
+                    android:src="@drawable/ic_date_pick"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_morning_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-2dp"
+                android:background="@drawable/shape_content_center_selector"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/item_height"
+                android:orientation="horizontal"
+                android:padding="@dimen/margins_10">
+
+                <TextView
+                    android:id="@+id/tv_morning_or_fee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上午："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/tv_morning_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/text_83"
+                    android:textSize="@dimen/text_large" />
+
+                <ImageButton
+                    android:id="@+id/ib_morning_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:contentDescription="@string/app_name"
+                    android:padding="@dimen/margins_10"
+                    android:src="@drawable/btn_check_selector" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_afternoon_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-2dp"
+                android:background="@drawable/shape_content_bottom_selector"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/item_height"
+                android:orientation="horizontal"
+                android:padding="@dimen/margins_10">
+
+                <TextView
+                    android:id="@+id/tv_afternoon_or_order_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="下午："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/tv_afternoon_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/text_83"
+                    android:textSize="@dimen/text_large" />
+
+                <ImageButton
+                    android:id="@+id/ib_afternoon_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:contentDescription="@string/app_name"
+                    android:padding="@dimen/margins_10"
+                    android:src="@drawable/btn_check_selector" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margins_20"
+                android:background="@drawable/shape_content_top_selector"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/item_height"
+                android:orientation="horizontal"
+                android:padding="@dimen/margins_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="就诊卡"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margins_10"
+                    android:layout_marginStart="@dimen/margins_10"
+                    android:layout_weight="1"
+                    android:textColor="@color/text_83"
+                    android:textSize="@dimen/text_small" />
+
+                <TextView
+                    android:id="@+id/tv_select_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/margins_5"
+                    android:drawableRight="@drawable/ic_arrow_right_yellow"
+                    android:padding="@dimen/margins_5"
+                    android:text="选择"
+                    android:textColor="@color/text_yellow"
+                    android:textSize="@dimen/text_large" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-2dp"
+                android:background="@drawable/shape_content_center_selector"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/item_height"
+                android:orientation="horizontal"
+                android:padding="@dimen/margins_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="姓        名："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large" />
+
+                <EditText
+                    android:id="@+id/tv_patient_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请输入您的姓名"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:textColor="@color/text_83"
+                    android:textSize="@dimen/text_large" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-2dp"
+                android:background="@drawable/shape_content_center_selector"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/item_height"
+                android:orientation="horizontal"
+                android:padding="@dimen/margins_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="性        别："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large" />
+
+                <RadioGroup
+                    android:id="@+id/rg_check_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margins_10"
+                    android:layout_marginStart="@dimen/margins_10"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_man"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@drawable/btn_check_selector"
+                        android:checked="true"
+                        android:padding="@dimen/margins_5"
+                        android:text="男"
+                        android:textColor="@color/text_yellow_black_selector" />
+
+                    <RadioButton
+                        android:id="@+id/rb_women"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margins_20"
+                        android:layout_marginStart="@dimen/margins_20"
+                        android:layout_weight="1"
+                        android:button="@drawable/btn_check_selector"
+                        android:padding="@dimen/margins_5"
+                        android:text="女"
+                        android:textColor="@color/text_yellow_black_selector" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-2dp"
+                android:background="@drawable/shape_content_center_selector"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/item_height"
+                android:orientation="horizontal"
+                android:padding="@dimen/margins_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="手机号码："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large" />
+
+                <EditText
+                    android:id="@+id/tv_patient_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请输入您的手机号码"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:singleLine="true"
+                    android:textColor="@color/text_83"
+                    android:textSize="@dimen/text_large" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-2dp"
+                android:background="@drawable/shape_content_center_selector"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/item_height"
+                android:orientation="horizontal"
+                android:padding="@dimen/margins_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="就诊卡号："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large" />
+
+                <EditText
+                    android:id="@+id/tv_patient_treate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请输入您的就诊卡号"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:textColor="@color/text_83"
+                    android:textSize="@dimen/text_large" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margins_10"
+                android:layout_marginTop="-2dp"
+                android:background="@drawable/shape_content_bottom_selector"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/item_height"
+                android:orientation="horizontal"
+                android:padding="@dimen/margins_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="身份证号："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large" />
+
+                <EditText
+                    android:id="@+id/tv_patient_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请输入您的身份证号"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    android:textColor="@color/text_83"
+                    android:textSize="@dimen/text_large" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margins_10"
+        android:background="@drawable/shape_btn_bg_selector"
+        android:enabled="false"
+        android:minHeight="40dp"
+        android:text="挂号"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_largest" />
+
+</LinearLayout>

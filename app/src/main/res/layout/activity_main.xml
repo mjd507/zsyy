@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View style="@style/DividerLineStyle" />
+
+    <RadioGroup
+        android:id="@+id/rg_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_small">
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/RadioButtonStyle"
+            android:checked="true"
+            android:drawableTop="@drawable/btn_main_tab1_selector"
+            android:text="掌上医院" />
+
+        <RadioButton
+            android:id="@+id/rb_service"
+            style="@style/RadioButtonStyle"
+            android:drawableTop="@drawable/btn_main_tab2_selector"
+            android:text="服务" />
+
+        <RadioButton
+            android:id="@+id/rb_subscribe"
+            style="@style/RadioButtonStyle"
+            android:drawableTop="@drawable/btn_main_tab3_selector"
+            android:text="订阅" />
+
+        <RadioButton
+            android:id="@+id/rb_health_record"
+            style="@style/RadioButtonStyle"
+            android:drawableTop="@drawable/btn_main_tab4_selector"
+            android:text="健康档案" />
+    </RadioGroup>
+</LinearLayout>
