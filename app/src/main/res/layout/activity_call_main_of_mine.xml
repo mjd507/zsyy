@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <include layout="@layout/layout_search" />
+
+    <!--<com.handmark.pulltorefresh.library.PullToRefreshScrollView-->
+    <!--android:id="@+id/scroll_view"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0.0dip"-->
+    <!--android:layout_weight="1.0">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--<ScrollListView-->
+            <!--android:id="@+id/my_list"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="@dimen/margins_10"-->
+            <!--android:layout_marginRight="@dimen/margins_10"-->
+            <!--android:clickable="false"-->
+            <!--android:divider="@null"-->
+            <!--android:listSelector="#00000000" />-->
+
+        <ImageView
+            android:id="@+id/img_call_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margins_20"
+            android:layout_marginTop="@dimen/margins_20"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/bg_call_null"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margins_10"
+            android:gravity="center"
+            android:padding="@dimen/margins_10"
+            android:text="查看更多叫号"
+            android:textColor="@color/text_38" />
+
+        <include layout="@layout/layout_call_tip" />
+    </LinearLayout>
+    <!--</com.handmark.pulltorefresh.library.PullToRefreshScrollView>-->
+</LinearLayout>

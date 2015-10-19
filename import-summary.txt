@@ -16,19 +16,19 @@ The following files were *not* copied into the new Gradle project; you
 should evaluate whether these are still needed in your project and if
 so manually move them:
 
+From PullToRefreshListFragment:
+* LICENSE
+* pom.xml
+From PullToRefreshViewPager:
+* ant.properties
+* pom.xml
+* proguard-project.txt
 From library:
+* LICENSE
 * pom.xml
 From sample:
-* logo.png
+* LICENSE
 * pom.xml
-* psd\
-* psd\icon_hdpi.psd
-* psd\icon_mdpi.psd
-* psd\icon_xhdpi.psd
-* psd\logo.psd
-* psd\web.psd
-* screens.png
-* web.png
 
 Replaced Jars with Dependencies:
 --------------------------------
@@ -51,10 +51,19 @@ In library:
 * AndroidManifest.xml => library\src\main\AndroidManifest.xml
 * res\ => library\src\main\res\
 * src\ => library\src\main\java\
+In PullToRefreshListFragment:
+* AndroidManifest.xml => pullToRefreshListFragment\src\main\AndroidManifest.xml
+* res\ => pullToRefreshListFragment\src\main\res\
+* src\ => pullToRefreshListFragment\src\main\java\
+In PullToRefreshViewPager:
+* AndroidManifest.xml => pullToRefreshViewPager\src\main\AndroidManifest.xml
+* res\ => pullToRefreshViewPager\src\main\res\
+* src\ => pullToRefreshViewPager\src\main\java\
 In sample:
-* AndroidManifest.xml => ViewPagerIndicator_sample\src\main\AndroidManifest.xml
-* res\ => ViewPagerIndicator_sample\src\main\res\
-* src\ => ViewPagerIndicator_sample\src\main\java\
+* AndroidManifest.xml => sample\src\main\AndroidManifest.xml
+* assets\ => sample\src\main\assets\
+* res\ => sample\src\main\res\
+* src\ => sample\src\main\java\
 
 Missing Android Support Repository:
 -----------------------------------

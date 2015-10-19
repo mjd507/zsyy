@@ -17,25 +17,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- 手机挂号 start-->
         <activity
             android:name=".activity.RegisterMainActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".activity.HomeModule2Activity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".activity.HomeModule3Activity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".activity.HomeModule4Activity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".activity.HomeModule5Activity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".activity.HomeModule6Activity"
-            android:screenOrientation="portrait" />
-
         <activity
             android:name=".activity.RegisterFacultyActivity"
             android:screenOrientation="portrait" />
@@ -52,6 +38,27 @@
         <activity
             android:name=".activity.RegisterDoctorScheduleActivity"
             android:screenOrientation="portrait" />
+        <!-- 手机挂号 end-->
+
+        <!-- 排队叫号 start-->
+        <activity
+            android:name=".activity.CallMainActivity"
+            android:screenOrientation="portrait" />
+        <!-- 排队叫号 end-->
+
+        <activity
+            android:name=".activity.HomeModule3Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.HomeModule4Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.HomeModule5Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.HomeModule6Activity"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

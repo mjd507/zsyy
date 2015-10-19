@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_search"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_search"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/search_min_height"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="@dimen/margins_10"
+        android:layout_weight="1.0"
+        android:background="@drawable/bg_search_edit"
+        android:gravity="center_vertical"
+        android:paddingBottom="0.0dip"
+        android:paddingRight="0.0dip"
+        android:paddingTop="0.0dip">
+
+        <ImageButton
+            android:id="@+id/ib_search_quit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:paddingRight="4.0dip"
+            android:src="@drawable/bg_search_quit"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4.0dip"
+            android:layout_toLeftOf="@+id/ib_search_quit"
+            android:background="@null"
+            android:drawableLeft="@drawable/ic_search"
+            android:drawablePadding="4.0dip"
+            android:hint="请输入关键字"
+            android:padding="0.0dip"
+            android:singleLine="true"
+            android:textSize="@dimen/text_large" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/search_min_height"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/margins_10"
+        android:background="@drawable/bg_search_selector"
+        android:contentDescription="@string/app_name"
+        android:paddingLeft="@dimen/margins_12"
+        android:paddingRight="@dimen/margins_12"
+        android:text="请输入科室名称搜索"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_large"
+        android:visibility="visible" />
+</LinearLayout>

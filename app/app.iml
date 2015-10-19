@@ -94,5 +94,6 @@
     <orderEntry type="library" exported="" name="stickylistheaders-2.7.0" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-22.2.1" level="project" />
     <orderEntry type="module" module-name="ViewPagerIndicator_library" exported="" />
+    <orderEntry type="module" module-name="PullToRefresh_library" exported="" />
   </component>
 </module>

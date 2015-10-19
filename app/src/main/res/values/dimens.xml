@@ -9,6 +9,8 @@
     <!-- line -->
     <dimen name="line_size">1px</dimen>
 
+    <dimen name="search_min_height">40dp</dimen>
+
     <!-- text size -->
     <dimen name="text_small">12sp</dimen>
     <dimen name="text_medium">14sp</dimen>

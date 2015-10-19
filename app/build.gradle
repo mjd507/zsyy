@@ -24,4 +24,5 @@ dependencies {
     compile 'com.android.support:support-v4:22.2.1'
     compile project(':ViewPagerIndicator_library')
     compile 'se.emilsjolander:stickylistheaders:2.7.0'
+    compile project(':PullToRefresh_library')
 }

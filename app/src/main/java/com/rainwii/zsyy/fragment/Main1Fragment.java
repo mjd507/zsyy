@@ -7,11 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.rainwii.zsyy.R;
 import com.rainwii.zsyy.activity.RegisterMainActivity;
-import com.rainwii.zsyy.activity.HomeModule2Activity;
+import com.rainwii.zsyy.activity.CallMainActivity;
 import com.rainwii.zsyy.activity.HomeModule3Activity;
 import com.rainwii.zsyy.activity.HomeModule4Activity;
 import com.rainwii.zsyy.activity.HomeModule5Activity;
@@ -87,7 +86,7 @@ public class Main1Fragment extends BaseFragment {
                         enterActivity(RegisterMainActivity.class);
                         break;
                     case 1:     //Queuing for calling
-                        enterActivity(HomeModule2Activity.class);
+                        enterActivity(CallMainActivity.class);
                         break;
                     case 2:     //Report Query
                         enterActivity(HomeModule3Activity.class);

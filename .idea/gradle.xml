@@ -9,8 +9,8 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/PullToRefresh_library" />
             <option value="$PROJECT_DIR$/ViewPagerIndicator_library" />
-            <option value="$PROJECT_DIR$/ViewPagerIndicator_sample" />
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>
