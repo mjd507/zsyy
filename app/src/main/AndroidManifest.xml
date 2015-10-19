@@ -43,7 +43,8 @@
         <!-- 排队叫号 start-->
         <activity
             android:name=".activity.CallMainActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
         <!-- 排队叫号 end-->
 
         <activity
