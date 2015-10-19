@@ -19,15 +19,15 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!--<ScrollListView-->
-            <!--android:id="@+id/my_list"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginLeft="@dimen/margins_10"-->
-            <!--android:layout_marginRight="@dimen/margins_10"-->
-            <!--android:clickable="false"-->
-            <!--android:divider="@null"-->
-            <!--android:listSelector="#00000000" />-->
+        <com.rainwii.zsyy.view.MyListView
+            android:id="@+id/my_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margins_10"
+            android:layout_marginRight="@dimen/margins_10"
+            android:clickable="false"
+            android:divider="@null"
+            android:listSelector="#00000000" />
 
         <ImageView
             android:id="@+id/img_call_num"
