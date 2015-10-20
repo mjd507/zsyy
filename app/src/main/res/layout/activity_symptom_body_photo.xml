@@ -47,8 +47,8 @@
             android:layout_marginTop="16.0dip"
             android:orientation="vertical">
 
-            <RadioButton
-                android:id="@+id/rb_symptom_sex"
+            <CheckBox
+                android:id="@+id/cb_symptom_sex"
                 android:layout_width="@dimen/symptom_sex_width"
                 android:layout_height="@dimen/symptom_sex_height"
                 android:background="@drawable/btn_symptom_small_button_selector"

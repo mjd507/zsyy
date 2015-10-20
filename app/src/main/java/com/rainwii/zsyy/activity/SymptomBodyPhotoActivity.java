@@ -4,11 +4,10 @@ import android.graphics.drawable.BitmapDrawable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.CompoundButton;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.PopupWindow;
-import android.widget.RadioButton;
 import android.widget.TextView;
 
 import com.rainwii.zsyy.R;
@@ -24,7 +23,7 @@ public class SymptomBodyPhotoActivity extends BaseActivity {
     private ImageView ivPhotoRear;
     private ImageView ivPhotoFront;
     private ImageView ivInfo;
-    private RadioButton rbSex;
+    private CheckBox cbSex;
     private Button btnAge;
     private TextView tvBodyFlip;
     private PopupWindow popupWindow;
@@ -36,7 +35,7 @@ public class SymptomBodyPhotoActivity extends BaseActivity {
         ivPhotoRear = (ImageView) this.findViewById(R.id.iv_symptom_photo_rear);
         ivPhotoFront = (ImageView) this.findViewById(R.id.iv_symptom_photo_front);
         ivInfo = (ImageView) this.findViewById(R.id.iv_info);
-        rbSex = (RadioButton) this.findViewById(R.id.rb_symptom_sex);
+        cbSex = (CheckBox) this.findViewById(R.id.cb_symptom_sex);
         btnAge = (Button) this.findViewById(R.id.btn_symptom_age);
         tvBodyFlip = (TextView) this.findViewById(R.id.tv_symptom_body_flip);
     }
@@ -48,12 +47,7 @@ public class SymptomBodyPhotoActivity extends BaseActivity {
 
     @Override
     protected void initListeners() {
-        rbSex.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                rbSex.setChecked(!rbSex.isChecked());
-            }
-        });
+        cbSex.setOnClickListener(this);
         btnAge.setOnClickListener(this);
         tvBodyFlip.setOnClickListener(this);
     }
@@ -61,11 +55,12 @@ public class SymptomBodyPhotoActivity extends BaseActivity {
     @Override
     protected void handleClick(View view) {
         switch (view.getId()) {
+            case R.id.cb_symptom_sex:
+                break;
             case R.id.btn_symptom_age:
                 showPopupWindow();
                 break;
             case R.id.tv_symptom_body_flip:
-                
                 break;
         }
     }
