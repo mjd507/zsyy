@@ -10,11 +10,11 @@ import android.widget.ImageView;
 
 import com.rainwii.zsyy.R;
 import com.rainwii.zsyy.activity.CallMainActivity;
-import com.rainwii.zsyy.activity.HomeModule4Activity;
 import com.rainwii.zsyy.activity.HomeModule5Activity;
 import com.rainwii.zsyy.activity.HomeModule6Activity;
 import com.rainwii.zsyy.activity.RegisterMainActivity;
 import com.rainwii.zsyy.activity.ReportMainActivity;
+import com.rainwii.zsyy.activity.SymptomBodyPhotoActivity;
 import com.rainwii.zsyy.adapter.HomeModulesAdapter;
 import com.rainwii.zsyy.adapter.HomeShuffleAdapter;
 import com.rainwii.zsyy.view.MyGridView;
@@ -92,7 +92,7 @@ public class Main1Fragment extends BaseFragment {
                         enterActivity(ReportMainActivity.class);
                         break;
                     case 3:     //Intelligent Guide
-                        enterActivity(HomeModule4Activity.class);
+                        enterActivity(SymptomBodyPhotoActivity.class);
                         break;
                     case 4:     //Expert Scheduling
                         enterActivity(HomeModule5Activity.class);

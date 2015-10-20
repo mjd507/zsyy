@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_symptom_small_button_unselect"
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="65.0dip"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:dividerHeight="0.0dip"
+        android:listSelector="@android:color/transparent"
+        android:overScrollMode="never"
+        android:scrollingCache="false" />
+</LinearLayout>

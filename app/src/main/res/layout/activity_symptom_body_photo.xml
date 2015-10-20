@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_symptom_photo_rear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/iv_symptom_photo_front"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/bg_symptom_man_body_up" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginTop="16.0dip"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_symptom_tip" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginTop="16.0dip"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rb_symptom_sex"
+                android:layout_width="@dimen/symptom_sex_width"
+                android:layout_height="@dimen/symptom_sex_height"
+                android:background="@drawable/btn_symptom_small_button_selector"
+                android:button="@null"
+                android:drawableTop="@drawable/btn_symptom_sex_selector"
+                android:gravity="center" />
+
+            <Button
+                android:id="@+id/btn_symptom_age"
+                android:layout_width="@dimen/symptom_sex_width"
+                android:layout_height="@dimen/symptom_sex_height"
+                android:layout_marginTop="16.0dip"
+                android:background="@drawable/btn_symptom_small_button_selector"
+                android:drawableRight="@drawable/ic_arrow_unselect_down"
+                android:gravity="center"
+                android:paddingRight="8.0dip"
+                android:textColor="@color/bg_title"
+                android:textSize="@dimen/text_large" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/tv_symptom_body_flip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left|center"
+            android:layout_marginBottom="16.0dip"
+            android:layout_marginLeft="16.0dip"
+            android:background="@drawable/btn_symptom_rotate_selector" />
+    </FrameLayout>
+</LinearLayout>

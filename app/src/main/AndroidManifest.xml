@@ -63,9 +63,12 @@
             android:screenOrientation="portrait" />
         <!-- 报告查询 end -->
 
+        <!-- 智能导诊 start-->
         <activity
-            android:name=".activity.HomeModule4Activity"
+            android:name=".activity.SymptomBodyPhotoActivity"
             android:screenOrientation="portrait" />
+        <!-- 智能导诊 end -->
+
         <activity
             android:name=".activity.HomeModule5Activity"
             android:screenOrientation="portrait" />
