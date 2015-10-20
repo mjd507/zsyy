@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@color/bg_title"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/space_largest"
+            android:drawableTop="@drawable/btn_register_type_1_logo"
+            android:gravity="center"
+            android:text="苏大附二院"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_large" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_large">
+
+        <TextView
+            android:id="@+id/tv_report_type_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:drawablePadding="@dimen/space_large"
+            android:drawableTop="@drawable/btn_report_type_1_selector"
+            android:gravity="center"
+            android:text="检查报告"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_large" />
+
+        <TextView
+            android:id="@+id/tv_report_type_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:drawablePadding="@dimen/space_large"
+            android:drawableTop="@drawable/btn_report_type_2_selector"
+            android:gravity="center"
+            android:text="体检报告"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_large" />
+    </LinearLayout>
+</LinearLayout>

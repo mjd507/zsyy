@@ -22,4 +22,15 @@ public class Constants {
     /**挂号专家工作表*/
     public static final String REGISTER_EXPERT_SCHEDULE = "registerExpertSchedule";
 
+    /**报告类型*/
+    public static final String REPORT_TYPE = "ReportType";
+    /**检查报告*/
+    public static final String REPORT_TYPE_EXAMINE = "reportTypeExamine";
+    /**体检报告*/
+    public static final String REPORT_TYPE_CHECKUP = "reportTypeCheckup";
+    /**人员姓名*/
+    public static final String REPORT_PERSON_NAME = "reportPersonName";
+    /**医嘱号码*/
+    public static final String REPORT_CODE = "reportCode";
+
 }

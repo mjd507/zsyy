@@ -47,9 +47,22 @@
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
         <!-- 排队叫号 end-->
 
+        <!-- 报告查询 start-->
         <activity
-            android:name=".activity.HomeModule3Activity"
+            android:name=".activity.ReportMainActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ReportLoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".activity.ReportExamineActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ReportCheckupActivity"
+            android:screenOrientation="portrait" />
+        <!-- 报告查询 end -->
+
         <activity
             android:name=".activity.HomeModule4Activity"
             android:screenOrientation="portrait" />

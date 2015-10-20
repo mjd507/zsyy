@@ -9,12 +9,12 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 
 import com.rainwii.zsyy.R;
-import com.rainwii.zsyy.activity.RegisterMainActivity;
 import com.rainwii.zsyy.activity.CallMainActivity;
-import com.rainwii.zsyy.activity.HomeModule3Activity;
 import com.rainwii.zsyy.activity.HomeModule4Activity;
 import com.rainwii.zsyy.activity.HomeModule5Activity;
 import com.rainwii.zsyy.activity.HomeModule6Activity;
+import com.rainwii.zsyy.activity.RegisterMainActivity;
+import com.rainwii.zsyy.activity.ReportMainActivity;
 import com.rainwii.zsyy.adapter.HomeModulesAdapter;
 import com.rainwii.zsyy.adapter.HomeShuffleAdapter;
 import com.rainwii.zsyy.view.MyGridView;
@@ -36,7 +36,7 @@ public class Main1Fragment extends BaseFragment {
     @Override
     protected View initView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main_1, null);
-        setTitle(view,"掌上医院");
+        setTitle(view, "掌上医院");
         vpShuffle = (ViewPager) view.findViewById(R.id.vp_shuffle);
         indicator = (CirclePageIndicator) view.findViewById(R.id.indicator);
         gvMainModules = (MyGridView) view.findViewById(R.id.gv_main_modules);
@@ -49,11 +49,11 @@ public class Main1Fragment extends BaseFragment {
         initModules();
     }
 
-     /**
+    /**
      * 初始化轮播图
      */
     private void initShuffle() {
-        List<ImageView> imagesList = new ArrayList<ImageView>();
+        List<ImageView> imagesList = new ArrayList<>();
         ImageView imageView1 = new ImageView(getActivity());
         imageView1.setImageResource(R.drawable.demo1);
         ImageView imageView2 = new ImageView(getActivity());
@@ -81,7 +81,7 @@ public class Main1Fragment extends BaseFragment {
         gvMainModules.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (position){
+                switch (position) {
                     case 0:     //Mobile Registration
                         enterActivity(RegisterMainActivity.class);
                         break;
@@ -89,7 +89,7 @@ public class Main1Fragment extends BaseFragment {
                         enterActivity(CallMainActivity.class);
                         break;
                     case 2:     //Report Query
-                        enterActivity(HomeModule3Activity.class);
+                        enterActivity(ReportMainActivity.class);
                         break;
                     case 3:     //Intelligent Guide
                         enterActivity(HomeModule4Activity.class);
