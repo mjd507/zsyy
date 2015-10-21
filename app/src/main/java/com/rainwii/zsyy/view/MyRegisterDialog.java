@@ -14,7 +14,7 @@ import com.rainwii.zsyy.R;
  */
 public class MyRegisterDialog extends Dialog {
     public MyRegisterDialog(Context context, String dialogTitle, String dialogInfo, String dialogOk) {
-        this(context, R.style.MyProgressDialogStyle, dialogTitle, dialogInfo, dialogOk);
+        this(context, R.style.MyRegisterDialogStyle, dialogTitle, dialogInfo, dialogOk);
     }
 
     public MyRegisterDialog(Context context, int theme, String dialogTitle, String dialogInfo, String dialogOk) {

@@ -54,7 +54,8 @@
                 android:background="@drawable/btn_symptom_small_button_selector"
                 android:button="@null"
                 android:drawableTop="@drawable/btn_symptom_sex_selector"
-                android:gravity="center" />
+                android:gravity="center"
+                android:text="@null" />
 
             <Button
                 android:id="@+id/btn_symptom_age"
@@ -70,7 +71,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/tv_symptom_body_flip"
+            android:id="@+id/btn_symptom_body_flip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|left|center"
