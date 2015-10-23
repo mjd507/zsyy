@@ -9,12 +9,12 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 
 import com.rainwii.zsyy.R;
-import com.rainwii.zsyy.activity.CallMainActivity;
+import com.rainwii.zsyy.activity.call.CallMainActivity;
 import com.rainwii.zsyy.activity.HomeModule5Activity;
 import com.rainwii.zsyy.activity.HomeModule6Activity;
-import com.rainwii.zsyy.activity.RegisterMainActivity;
-import com.rainwii.zsyy.activity.ReportMainActivity;
-import com.rainwii.zsyy.activity.SymptomBodyPhotoActivity;
+import com.rainwii.zsyy.activity.symptom.SymptomMainActivity;
+import com.rainwii.zsyy.activity.register.RegisterMainActivity;
+import com.rainwii.zsyy.activity.report.ReportMainActivity;
 import com.rainwii.zsyy.adapter.HomeModulesAdapter;
 import com.rainwii.zsyy.adapter.HomeShuffleAdapter;
 import com.rainwii.zsyy.view.MyGridView;
@@ -34,7 +34,7 @@ public class Main1Fragment extends BaseFragment {
     private CirclePageIndicator indicator;
 
     @Override
-    protected View initView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    protected View initViews(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main_1, null);
         setTitle(view, "掌上医院");
         vpShuffle = (ViewPager) view.findViewById(R.id.vp_shuffle);
@@ -77,7 +77,7 @@ public class Main1Fragment extends BaseFragment {
     }
 
     @Override
-    protected void initListener() {
+    protected void initListeners() {
         gvMainModules.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -92,7 +92,7 @@ public class Main1Fragment extends BaseFragment {
                         enterActivity(ReportMainActivity.class);
                         break;
                     case 3:     //Intelligent Guide
-                        enterActivity(SymptomBodyPhotoActivity.class);
+                        enterActivity(SymptomMainActivity.class);
                         break;
                     case 4:     //Expert Scheduling
                         enterActivity(HomeModule5Activity.class);

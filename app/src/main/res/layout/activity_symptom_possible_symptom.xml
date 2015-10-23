@@ -6,8 +6,6 @@
 
     <include layout="@layout/layout_title" />
 
-    <include layout="@layout/layout_register_step" />
-
     <include layout="@layout/layout_listview" />
 
 </LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0">
+
+        <TextView
+            android:id="@+id/empty"
+            style="@style/SubtitleText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="如有其他症状
+点击右上角继续添加"
+            android:textSize="@dimen/text_large" />
+
+        <ListView
+            android:id="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:listSelector="#00000000" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margins_10"
+        android:background="@drawable/shape_btn_bg_selector"
+        android:minHeight="@dimen/item_height"
+        android:text="诊断"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/title_text_size" />
+</LinearLayout>

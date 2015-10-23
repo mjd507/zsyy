@@ -33,4 +33,8 @@ public class Constants {
     /**医嘱号码*/
     public static final String REPORT_CODE = "reportCode";
 
+    /**智能导诊 身体部位*/
+    public static final String BODY_AREA = "bodyArea";
+
+
 }

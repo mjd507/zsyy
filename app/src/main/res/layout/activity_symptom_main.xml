@@ -6,8 +6,9 @@
 
     <include layout="@layout/layout_title" />
 
-    <include layout="@layout/layout_register_step" />
-
-    <include layout="@layout/layout_listview" />
+    <FrameLayout
+        android:id="@+id/fl_intelligent_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>

@@ -27,7 +27,7 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = initView(inflater, container, savedInstanceState);
+        View view = initViews(inflater, container, savedInstanceState);
         return view;
     }
 
@@ -35,14 +35,14 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         initData();
-        initListener();
+        initListeners();
     }
 
-    protected abstract View initView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState);
+    protected abstract View initViews(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState);
 
     protected abstract void initData();
 
-    protected abstract void initListener();
+    protected abstract void initListeners();
 
     protected abstract void handleClick(View view);
 

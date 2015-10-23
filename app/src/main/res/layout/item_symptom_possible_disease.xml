@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/margins_10">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/bg_symptom_result_left" />
+
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@xml/symptom_disease_buttom_line"
+            android:gravity="center"
+            android:paddingTop="@dimen/margins_5"
+            android:text="可能疾病"
+            android:textSize="@dimen/text_large" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/bg_symptom_result_right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_symptom_result_detail"
+        android:paddingBottom="@dimen/margins_20"
+        android:paddingLeft="@dimen/margins_10"
+        android:paddingRight="@dimen/margins_10"
+        android:paddingTop="@dimen/margins_10">
+
+        <com.rainwii.zsyy.view.MyGridView
+            android:id="@+id/gv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="@dimen/margins_20"
+            android:listSelector="#00000000"
+            android:numColumns="2"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="@dimen/margins_10" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_faculty_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_f5"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/item_height">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margins_20"
+            android:layout_marginRight="@dimen/margins_10"
+            android:text="推荐科室"
+            android:textSize="@dimen/text_large" />
+
+        <TextView
+            android:id="@+id/tv_faculty_name"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margins_5"
+            android:layout_weight="1.0"
+            android:gravity="right"
+            android:textColor="@color/bg_title"
+            android:textSize="@dimen/text_large" />
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margins_10"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_arrow_down_hui" />
+    </LinearLayout>
+
+    <View style="@style/DividerLineStyle" />
+
+    <LinearLayout
+        android:id="@+id/ll_more_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_f5"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/item_height"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/margins_5"
+        android:paddingTop="@dimen/margins_10"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btn_action_1"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/btn_symptom_disease_1_selector" />
+
+        <Button
+            android:id="@+id/btn_action_2"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/btn_symptom_disease_2_selector" />
+
+        <Button
+            android:id="@+id/btn_action_3"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/btn_symptom_disease_3_selector"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_action_4"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/btn_symptom_disease_4_selector" />
+    </LinearLayout>
+</LinearLayout>

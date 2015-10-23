@@ -1,10 +1,11 @@
-package com.rainwii.zsyy.activity;
+package com.rainwii.zsyy.activity.register;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
 import com.rainwii.zsyy.R;
+import com.rainwii.zsyy.activity.BaseActivity;
 import com.rainwii.zsyy.constants.Constants;
 
 /**

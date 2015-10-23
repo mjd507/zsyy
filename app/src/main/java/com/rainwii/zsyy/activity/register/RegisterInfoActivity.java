@@ -1,4 +1,4 @@
-package com.rainwii.zsyy.activity;
+package com.rainwii.zsyy.activity.register;
 
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
@@ -19,6 +19,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.rainwii.zsyy.R;
+import com.rainwii.zsyy.activity.BaseActivity;
 import com.rainwii.zsyy.adapter.RegisterPopDialogAdapter;
 import com.rainwii.zsyy.bean.ExpertScheduleInfo;
 import com.rainwii.zsyy.constants.Constants;

@@ -1,4 +1,4 @@
-package com.rainwii.zsyy.activity;
+package com.rainwii.zsyy.activity.register;
 
 import android.view.View;
 import android.widget.Button;
@@ -6,6 +6,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.rainwii.zsyy.R;
+import com.rainwii.zsyy.activity.BaseActivity;
 import com.rainwii.zsyy.constants.Constants;
 import com.rainwii.zsyy.utils.SharedPreferencesUtils;
 

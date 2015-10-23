@@ -1,4 +1,4 @@
-package com.rainwii.zsyy.activity;
+package com.rainwii.zsyy.activity.call;
 
 import android.view.View;
 import android.widget.AdapterView;
@@ -7,6 +7,7 @@ import android.widget.LinearLayout;
 
 import com.handmark.pulltorefresh.library.PullToRefreshScrollView;
 import com.rainwii.zsyy.R;
+import com.rainwii.zsyy.activity.BaseActivity;
 import com.rainwii.zsyy.adapter.CallAdapter;
 import com.rainwii.zsyy.bean.Call;
 import com.rainwii.zsyy.utils.DateUtils;

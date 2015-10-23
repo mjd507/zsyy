@@ -20,52 +20,64 @@
 
         <!-- 手机挂号 start-->
         <activity
-            android:name=".activity.RegisterMainActivity"
+            android:name=".activity.register.RegisterMainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.RegisterFacultyActivity"
+            android:name=".activity.register.RegisterFacultyActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.RegisterInfoActivity"
+            android:name=".activity.register.RegisterInfoActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity
-            android:name=".activity.RegisterPayActivity"
+            android:name=".activity.register.RegisterPayActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.RegisterSuccessActivity"
+            android:name=".activity.register.RegisterSuccessActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.RegisterDoctorScheduleActivity"
+            android:name=".activity.register.RegisterDoctorScheduleActivity"
             android:screenOrientation="portrait" />
         <!-- 手机挂号 end-->
 
         <!-- 排队叫号 start-->
         <activity
-            android:name=".activity.CallMainActivity"
+            android:name=".activity.call.CallMainActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
         <!-- 排队叫号 end-->
 
         <!-- 报告查询 start-->
         <activity
-            android:name=".activity.ReportMainActivity"
+            android:name=".activity.report.ReportMainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.ReportLoginActivity"
+            android:name=".activity.report.ReportLoginActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
         <activity
-            android:name=".activity.ReportExamineActivity"
+            android:name=".activity.report.ReportExamineActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.ReportCheckupActivity"
+            android:name=".activity.report.ReportCheckupActivity"
             android:screenOrientation="portrait" />
         <!-- 报告查询 end -->
 
         <!-- 智能导诊 start-->
         <activity
-            android:name=".activity.SymptomBodyPhotoActivity"
+            android:name=".activity.symptom.SymptomMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.symptom.SymptomPossibleSymptomActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.symptom.SymptomQuestionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.symptom.SymptomDiagnosisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.symptom.SymptomPossibleDiseaseActivity"
             android:screenOrientation="portrait" />
         <!-- 智能导诊 end -->
 

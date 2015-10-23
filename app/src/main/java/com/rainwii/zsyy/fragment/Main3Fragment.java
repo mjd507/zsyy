@@ -14,7 +14,7 @@ import com.rainwii.zsyy.R;
  */
 public class Main3Fragment extends BaseFragment {
     @Override
-    protected View initView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    protected View initViews(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main_3, null);
         return view;
     }
@@ -25,7 +25,7 @@ public class Main3Fragment extends BaseFragment {
     }
 
     @Override
-    protected void initListener() {
+    protected void initListeners() {
 
     }
 

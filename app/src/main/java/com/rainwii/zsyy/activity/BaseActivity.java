@@ -15,7 +15,8 @@ public abstract class BaseActivity extends FragmentActivity implements View.OnCl
 
     public boolean isLeftBack = true;   //默认左上角代表返回按钮
 
-    private ImageView ivLeft;
+    public ImageView ivLeft;
+    public ImageView ivRight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +67,7 @@ public abstract class BaseActivity extends FragmentActivity implements View.OnCl
      */
     public void setTitleBackAndRight(String title, int rightId) {
         setTitleBack(title);
-        ImageView ivRight = (ImageView) this.findViewById(R.id.iv_title_right);
+        ivRight = (ImageView) this.findViewById(R.id.iv_title_right);
         ivRight.setVisibility(View.VISIBLE);
         ivRight.setImageResource(rightId);
         ivRight.setOnClickListener(this);

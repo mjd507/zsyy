@@ -1,9 +1,12 @@
-package com.rainwii.zsyy.activity;
+package com.rainwii.zsyy.fragment;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.graphics.drawable.BitmapDrawable;
+import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -14,15 +17,17 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.rainwii.zsyy.R;
+import com.rainwii.zsyy.activity.symptom.SymptomPossibleSymptomActivity;
 import com.rainwii.zsyy.adapter.SymptomAgeAdapter;
+import com.rainwii.zsyy.constants.Constants;
 import com.rainwii.zsyy.utils.LogUtils;
 
 /**
- * 描述：智能导诊
+ * 描述：智能导诊 --> 图片导诊
  * 作者 mjd
  * 日期：2015/10/20 17:27
  */
-public class SymptomBodyPhotoActivity extends BaseActivity {
+public class SymptomPhotoFragment extends BaseFragment {
     private ImageView ivPhotoRear;
     private ImageView ivPhotoFront;
     private ImageView ivInfo;
@@ -34,15 +39,15 @@ public class SymptomBodyPhotoActivity extends BaseActivity {
     private boolean isFront = true;    //默认是正面
 
     @Override
-    protected void initViews() {
-        setContentView(R.layout.activity_symptom_body_photo);
-        setTitleBackAndRight("智能导诊", R.drawable.ic_symptom_body_select);
-        ivPhotoRear = (ImageView) this.findViewById(R.id.iv_symptom_photo_rear);
-        ivPhotoFront = (ImageView) this.findViewById(R.id.iv_symptom_photo_front);
-        ivInfo = (ImageView) this.findViewById(R.id.iv_info);
-        cbSex = (CheckBox) this.findViewById(R.id.cb_symptom_sex);
-        btnAge = (Button) this.findViewById(R.id.btn_symptom_age);
-        btnFlip = (Button) this.findViewById(R.id.btn_symptom_body_flip);
+    protected View initViews(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_symptom_photo, null);
+        ivPhotoRear = (ImageView) view.findViewById(R.id.iv_symptom_photo_rear);
+        ivPhotoFront = (ImageView) view.findViewById(R.id.iv_symptom_photo_front);
+        ivInfo = (ImageView) view.findViewById(R.id.iv_info);
+        cbSex = (CheckBox) view.findViewById(R.id.cb_symptom_sex);
+        btnAge = (Button) view.findViewById(R.id.btn_symptom_age);
+        btnFlip = (Button) view.findViewById(R.id.btn_symptom_body_flip);
+        return view;
     }
 
     @Override
@@ -67,6 +72,9 @@ public class SymptomBodyPhotoActivity extends BaseActivity {
         btnAge.setOnClickListener(this);
         btnFlip.setOnClickListener(this);
         ivInfo.setOnClickListener(this);
+
+        ivPhotoFront.setOnClickListener(this);
+        ivPhotoRear.setOnClickListener(this);
     }
 
     @Override
@@ -81,14 +89,26 @@ public class SymptomBodyPhotoActivity extends BaseActivity {
             case R.id.iv_info:
                 showHintDialog();
                 break;
+            case R.id.iv_symptom_photo_front:
+                enterPossibleDiseaseActivity();
+                break;
+            case R.id.iv_symptom_photo_rear:
+                enterPossibleDiseaseActivity();
+                break;
         }
+    }
+
+    private void enterPossibleDiseaseActivity() {
+        Bundle bundle = new Bundle();
+        bundle.putString(Constants.BODY_AREA, "四肢");
+        enterActivity(SymptomPossibleSymptomActivity.class, bundle);
     }
 
     /**
      * 显示提示的对话框
      */
     private void showHintDialog() {
-        final AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.MyAlertDialogStyle);
+        final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.MyAlertDialogStyle);
         builder.setTitle("提示");
         builder.setMessage("点击人体图上的相应部位，选择症状、伴随症状、病史记录等信息，查看可能疾病和推荐就诊科室。\n"
                 + "\n" + " 该测试结果仅供参考，可能产生误诊、漏诊，如有疑问请咨询导医台工作人员。");
@@ -123,9 +143,9 @@ public class SymptomBodyPhotoActivity extends BaseActivity {
      * 显示年龄的popupWindow
      */
     private void showPopupWindow() {
-        View view = getLayoutInflater().inflate(R.layout.layout_symptom_pop_age, null);
+        View view = getActivity().getLayoutInflater().inflate(R.layout.layout_symptom_pop_age, null);
         ListView lv = (ListView) view.findViewById(R.id.lv);
-        SymptomAgeAdapter ageAdapter = new SymptomAgeAdapter(this);
+        SymptomAgeAdapter ageAdapter = new SymptomAgeAdapter(getActivity());
         lv.setAdapter(ageAdapter);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

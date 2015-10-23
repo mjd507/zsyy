@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/item_height"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/margins_10"
+            android:layout_height="match_parent"
+            android:background="@color/text_e5" />
+
+        <TextView
+            android:id="@+id/tv_question_title"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@color/text_f5"
+            android:drawableLeft="@drawable/ic_symptom_question"
+            android:drawablePadding="@dimen/margins_10"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margins_10"
+            android:paddingRight="@dimen/margins_10"
+            android:textColor="@color/text_yellow"
+            android:textSize="@dimen/text_largest" />
+
+        <TextView
+            android:layout_width="@dimen/margins_10"
+            android:layout_height="match_parent"
+            android:background="@color/text_e5" />
+    </LinearLayout>
+
+    <View style="@style/DividerLineStyle" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_symptom_question_around"
+            android:contentDescription="@string/app_name" />
+
+        <include
+            layout="@layout/layout_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margins_10"
+            android:layout_marginRight="@dimen/margins_10" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_last"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/shape_btn_bg_selector"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_large" />
+
+        <TextView
+            android:id="@+id/tv_question_current"
+            android:layout_width="@dimen/item_height"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_large" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/shape_btn_bg_selector"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_large" />
+    </LinearLayout>
+</LinearLayout>

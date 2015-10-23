@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.rainwii.zsyy.R;
-import com.rainwii.zsyy.activity.RegisterInfoActivity;
+import com.rainwii.zsyy.activity.register.RegisterInfoActivity;
 import com.rainwii.zsyy.bean.ExpertScheduleInfo;
 import com.rainwii.zsyy.constants.Constants;
 import com.rainwii.zsyy.view.MyRegisterDialog;
