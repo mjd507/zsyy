@@ -6,7 +6,7 @@
                 <shape>
                     <solid android:color="#ffffffff" />
                     <corners android:bottomLeftRadius="5.0dip" android:bottomRightRadius="5.0dip" android:topLeftRadius="5.0dip" android:topRightRadius="5.0dip" />
-                    <stroke android:width="1.0dip" android:color="@color/list_item_normal" />
+                    <stroke android:width="1.0dip" android:color="@color/list_divider" />
                 </shape>
             </item>
             <item android:bottom="1.0dip" android:left="1.0dip" android:right="1.0dip" android:top="1.0dip">

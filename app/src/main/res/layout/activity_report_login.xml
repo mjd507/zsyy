@@ -16,7 +16,7 @@
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/shape_content_one"
+            android:background="@drawable/adapter_content_one"
             android:gravity="center_vertical"
             android:minHeight="@dimen/item_height"
             android:orientation="horizontal">
@@ -46,7 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margins_10"
-            android:background="@drawable/shape_content_one"
+            android:background="@drawable/adapter_content_one"
             android:gravity="center_vertical"
             android:minHeight="@dimen/item_height"
             android:orientation="horizontal">
@@ -90,7 +90,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margins_20"
-            android:background="@drawable/shape_btn_bg_selector"
+            android:background="@drawable/color_btn_bg_selector"
             android:enabled="false"
             android:minHeight="@dimen/item_height"
             android:text="提交"

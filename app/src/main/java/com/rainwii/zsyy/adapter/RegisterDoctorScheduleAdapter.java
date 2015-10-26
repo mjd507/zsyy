@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.rainwii.zsyy.R;
 import com.rainwii.zsyy.activity.register.RegisterInfoActivity;
-import com.rainwii.zsyy.bean.ExpertScheduleInfo;
+import com.rainwii.zsyy.bean.RegisterExpertInfo;
 import com.rainwii.zsyy.constants.Constants;
 import com.rainwii.zsyy.view.MyRegisterDialog;
 
@@ -20,15 +20,15 @@ import java.util.List;
 import se.emilsjolander.stickylistheaders.StickyListHeadersAdapter;
 
 /**
- * 描述：专家号预约 专家列表的适配器
+ * 描述：专家号预约 选择医生列表的适配器
  * 作者 mjd
  * 日期：2015/10/16 22:34
  */
 public class RegisterDoctorScheduleAdapter extends BaseAdapter implements StickyListHeadersAdapter {
     private Context context;
-    private List<ExpertScheduleInfo> expertInfoList;
+    private List<RegisterExpertInfo> expertInfoList;
 
-    public RegisterDoctorScheduleAdapter(Context context, List<ExpertScheduleInfo> expertInfoList) {
+    public RegisterDoctorScheduleAdapter(Context context, List<RegisterExpertInfo> expertInfoList) {
         this.context = context;
         this.expertInfoList = expertInfoList;
     }
@@ -60,7 +60,7 @@ public class RegisterDoctorScheduleAdapter extends BaseAdapter implements Sticky
             view = convertView;
             holder = (ViewHolder) view.getTag();
         }
-        ExpertScheduleInfo info = expertInfoList.get(position);
+        RegisterExpertInfo info = expertInfoList.get(position);
         holder.tvName.setText(info.getName());
         holder.tvRank.setText(info.getRank());
         if (info.isAm() && !info.isPm()) {
@@ -69,14 +69,14 @@ public class RegisterDoctorScheduleAdapter extends BaseAdapter implements Sticky
             holder.tvAmCount.setText(info.getCount());
             holder.layout1.setVisibility(View.VISIBLE);
             holder.layout2.setVisibility(View.GONE);
-            holder.layout1.setBackgroundDrawable(context.getResources().getDrawable(R.drawable.shape_content_bottom_selector));
+            holder.layout1.setBackgroundDrawable(context.getResources().getDrawable(R.drawable.color_content_bottom_selector));
         } else if (info.isPm() && !info.isAm()) {
             holder.tvPmFlag.setText("下午");
             holder.tvPmFee.setText(info.getFee());
             holder.tvPmCount.setText(info.getCount());
             holder.layout1.setVisibility(View.GONE);
             holder.layout2.setVisibility(View.VISIBLE);
-            holder.layout2.setBackgroundDrawable(context.getResources().getDrawable(R.drawable.shape_content_bottom_selector));
+            holder.layout2.setBackgroundDrawable(context.getResources().getDrawable(R.drawable.color_content_bottom_selector));
         } else if (info.isAm() && info.isPm()) {
             holder.layout1.setVisibility(View.VISIBLE);
             holder.layout2.setVisibility(View.VISIBLE);
@@ -130,7 +130,7 @@ public class RegisterDoctorScheduleAdapter extends BaseAdapter implements Sticky
 
         @Override
         public void onClick(View v) {
-            ExpertScheduleInfo info = expertInfoList.get(position);
+            RegisterExpertInfo info = expertInfoList.get(position);
             switch (v.getId()) {
                 case R.id.tv_more_info:
                     MyRegisterDialog dialog = new MyRegisterDialog(context, info.getName(), info.getIntroduction(), "确定");
@@ -146,7 +146,7 @@ public class RegisterDoctorScheduleAdapter extends BaseAdapter implements Sticky
         }
     }
 
-    private void enterRegisterInfoActivity(ExpertScheduleInfo info, boolean isAm) {
+    private void enterRegisterInfoActivity(RegisterExpertInfo info, boolean isAm) {
         Bundle bundle = new Bundle();
         bundle.putString(Constants.REGISTER_TYPE, Constants.REGISTER_TYPE_EXPERT);
         bundle.putSerializable(Constants.REGISTER_EXPERT_SCHEDULE, info);

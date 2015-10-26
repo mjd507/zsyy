@@ -81,9 +81,18 @@
             android:screenOrientation="portrait" />
         <!-- 智能导诊 end -->
 
+        <!-- 专家排班 start-->
         <activity
-            android:name=".activity.HomeModule5Activity"
+            android:name=".activity.expert.ExpertFacultyActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.expert.ExpertListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.expert.ExpertScheduleActivity"
+            android:screenOrientation="portrait" />
+        <!-- 专家排班 end-->
+
         <activity
             android:name=".activity.HomeModule6Activity"
             android:screenOrientation="portrait" />

@@ -21,7 +21,7 @@ import android.widget.TextView;
 import com.rainwii.zsyy.R;
 import com.rainwii.zsyy.activity.BaseActivity;
 import com.rainwii.zsyy.adapter.RegisterPopDialogAdapter;
-import com.rainwii.zsyy.bean.ExpertScheduleInfo;
+import com.rainwii.zsyy.bean.RegisterExpertInfo;
 import com.rainwii.zsyy.constants.Constants;
 import com.rainwii.zsyy.utils.DateUtils;
 import com.rainwii.zsyy.utils.SharedPreferencesUtils;
@@ -86,7 +86,7 @@ public class RegisterInfoActivity extends BaseActivity {
     private String faculty;//科室
     private String registerType;//挂号类型
     private Bundle bundle;
-    private ExpertScheduleInfo scheduleInfo;
+    private RegisterExpertInfo scheduleInfo;
 
     @Override
     protected void initViews() {
@@ -167,7 +167,7 @@ public class RegisterInfoActivity extends BaseActivity {
             faculty = bundle.getString(Constants.REGISTER_FACULTY);
             tvFaculty.setText(faculty);
         } else {
-            scheduleInfo = (ExpertScheduleInfo) bundle.getSerializable(Constants.REGISTER_EXPERT_SCHEDULE);
+            scheduleInfo = (RegisterExpertInfo) bundle.getSerializable(Constants.REGISTER_EXPERT_SCHEDULE);
             tvFacultyOrDoctor.setText("医生：");
             tvFaculty.setText(scheduleInfo.getName());
             tvMoreInfo.setVisibility(View.GONE);
@@ -271,7 +271,7 @@ public class RegisterInfoActivity extends BaseActivity {
      * 获取可供选择的预约号码
      */
     private void getAlternativeOrderNum() {
-        ToastUtils.showShort(this,"暂无其它预约号");
+        ToastUtils.showShort(this, "暂无其它预约号");
     }
 
     private void enterNextActivity() {
@@ -375,6 +375,9 @@ public class RegisterInfoActivity extends BaseActivity {
      * 判断挂号按钮是否可以点击（初步检查数据）
      */
     private boolean isRegisterBtnEnabled() {
+        if(registerType.equals(Constants.REGISTER_TYPE_REAL_TIME) && !DateUtils.isRegisterTime()){
+            return false;
+        }
         boolean isDateNull = checkIsNull(tvDate.getText().toString());
 //        ibMorningCheck.isEnabled()?
 //        checkIsNull(tvSelectCard.getText().toString())

@@ -7,7 +7,7 @@ import android.widget.TextView;
 import com.rainwii.zsyy.R;
 import com.rainwii.zsyy.activity.BaseActivity;
 import com.rainwii.zsyy.adapter.RegisterDoctorScheduleAdapter;
-import com.rainwii.zsyy.bean.ExpertScheduleInfo;
+import com.rainwii.zsyy.bean.RegisterExpertInfo;
 import com.rainwii.zsyy.constants.Constants;
 import com.rainwii.zsyy.utils.SharedPreferencesUtils;
 
@@ -54,12 +54,12 @@ public class RegisterDoctorScheduleActivity extends BaseActivity {
     protected void initData() {
 
         //获取专家列表数据
-        List<ExpertScheduleInfo> scheduleInfoList = new ArrayList<>();
-        ExpertScheduleInfo info0 = new ExpertScheduleInfo(1, "2015-10-30 星期五", "马剑东", "主治医师", "祖籍江苏东台", true, true, "100", "2个号");
-        ExpertScheduleInfo info1 = new ExpertScheduleInfo(1, "2015-10-30 星期五", "华佗", "主治医师", "祖籍江苏东台", true, true, "100", "2个号");
-        ExpertScheduleInfo info2 = new ExpertScheduleInfo(2, "2015-10-31 星期六", "张仲景", "主治医师", "祖籍江苏东台", false, true, "100", "2个号");
-        ExpertScheduleInfo info3 = new ExpertScheduleInfo(3, "2015-11-01 星期日", "孙思邈", "主治医师", "祖籍江苏东台", false, true, "100", "2个号");
-        ExpertScheduleInfo info4 = new ExpertScheduleInfo(4, "2015-11-02 星期一", "扁鹊", "主治医师", "祖籍江苏东台", true, true, "100", "2个号");
+        List<RegisterExpertInfo> scheduleInfoList = new ArrayList<>();
+        RegisterExpertInfo info0 = new RegisterExpertInfo(1, "2015-10-30 星期五", "马剑东", "主治医师", "祖籍江苏东台", true, true, "100", "2个号");
+        RegisterExpertInfo info1 = new RegisterExpertInfo(1, "2015-10-30 星期五", "华佗", "主治医师", "祖籍江苏东台", true, true, "100", "2个号");
+        RegisterExpertInfo info2 = new RegisterExpertInfo(2, "2015-10-31 星期六", "张仲景", "主治医师", "祖籍江苏东台", false, true, "100", "2个号");
+        RegisterExpertInfo info3 = new RegisterExpertInfo(3, "2015-11-01 星期日", "孙思邈", "主治医师", "祖籍江苏东台", false, true, "100", "2个号");
+        RegisterExpertInfo info4 = new RegisterExpertInfo(4, "2015-11-02 星期一", "扁鹊", "主治医师", "祖籍江苏东台", true, true, "100", "2个号");
         scheduleInfoList.add(info0);
         scheduleInfoList.add(info1);
         scheduleInfoList.add(info2);
@@ -72,6 +72,7 @@ public class RegisterDoctorScheduleActivity extends BaseActivity {
 
     @Override
     protected void initListeners() {
+
     }
 
     @Override

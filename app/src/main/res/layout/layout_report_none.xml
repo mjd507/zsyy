@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margins_10"
-        android:background="@drawable/shape_content_one"
+        android:background="@drawable/adapter_content_one"
         android:orientation="vertical"
         android:padding="@dimen/margins_10">
 
@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margins_10"
-        android:background="@drawable/shape_btn_bg_selector"
+        android:background="@drawable/color_btn_bg_selector"
         android:minHeight="@dimen/item_height"
         android:text="结果出来后，推送通知我"
         android:textColor="@android:color/white"

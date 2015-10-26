@@ -40,7 +40,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:horizontalSpacing="@dimen/space_small"
-                android:listSelector="@drawable/shape_gv_item_bg_selector"
+                android:listSelector="@drawable/color_gv_item_bg_selector"
                 android:numColumns="3"
                 android:padding="@dimen/space_medium"
                 android:verticalSpacing="@dimen/space_small" />

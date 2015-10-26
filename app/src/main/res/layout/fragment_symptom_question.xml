@@ -66,7 +66,7 @@
             android:layout_width="0.0dip"
             android:layout_height="match_parent"
             android:layout_weight="1.0"
-            android:background="@drawable/shape_btn_bg_selector"
+            android:background="@drawable/color_btn_bg_selector"
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="@dimen/text_large" />
@@ -84,7 +84,7 @@
             android:layout_width="0.0dip"
             android:layout_height="match_parent"
             android:layout_weight="1.0"
-            android:background="@drawable/shape_btn_bg_selector"
+            android:background="@drawable/color_btn_bg_selector"
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="@dimen/text_large" />

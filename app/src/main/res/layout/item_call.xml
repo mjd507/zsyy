@@ -11,7 +11,7 @@
         android:layout_marginLeft="@dimen/margins_10"
         android:layout_marginRight="@dimen/margins_10"
         android:layout_marginTop="@dimen/margins_5"
-        android:background="@drawable/shape_content_one_call"
+        android:background="@drawable/adapter_content_one_call"
         android:orientation="horizontal"
         android:padding="@dimen/margins_15">
 

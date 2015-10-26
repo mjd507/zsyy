@@ -7,7 +7,7 @@ import java.io.Serializable;
  * 作者 mjd
  * 日期：2015/10/16 22:39
  */
-public class ExpertScheduleInfo implements Serializable{
+public class RegisterExpertInfo implements Serializable{
     private long dateId;
     private String date;
     private String name;
@@ -18,10 +18,10 @@ public class ExpertScheduleInfo implements Serializable{
     private String fee;
     private String count;
 
-    public ExpertScheduleInfo() {
+    public RegisterExpertInfo() {
     }
 
-    public ExpertScheduleInfo(long dateId, String date, String name, String rank, String introduction, boolean isAm, boolean isPm, String fee, String count) {
+    public RegisterExpertInfo(long dateId, String date, String name, String rank, String introduction, boolean isAm, boolean isPm, String fee, String count) {
         this.dateId = dateId;
         this.date = date;
         this.name = name;

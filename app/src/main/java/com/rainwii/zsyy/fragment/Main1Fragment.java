@@ -10,7 +10,7 @@ import android.widget.ImageView;
 
 import com.rainwii.zsyy.R;
 import com.rainwii.zsyy.activity.call.CallMainActivity;
-import com.rainwii.zsyy.activity.HomeModule5Activity;
+import com.rainwii.zsyy.activity.expert.ExpertFacultyActivity;
 import com.rainwii.zsyy.activity.HomeModule6Activity;
 import com.rainwii.zsyy.activity.symptom.SymptomMainActivity;
 import com.rainwii.zsyy.activity.register.RegisterMainActivity;
@@ -95,7 +95,7 @@ public class Main1Fragment extends BaseFragment {
                         enterActivity(SymptomMainActivity.class);
                         break;
                     case 4:     //Expert Scheduling
-                        enterActivity(HomeModule5Activity.class);
+                        enterActivity(ExpertFacultyActivity.class);
                         break;
                     case 5:     //Hospital Navigation
                         enterActivity(HomeModule6Activity.class);

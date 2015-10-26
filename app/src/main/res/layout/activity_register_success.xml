@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margins_10"
-        android:background="@drawable/shape_btn_bg_selector"
+        android:background="@drawable/color_btn_bg_selector"
         android:minHeight="40dp"
         android:text="确定"
         android:textColor="@android:color/white"

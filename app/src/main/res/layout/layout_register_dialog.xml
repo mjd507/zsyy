@@ -9,7 +9,7 @@
         android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape_dialog_top_selector"
+        android:background="@drawable/adapter_content_top_selector"
         android:gravity="center"
         android:padding="@dimen/margins_10"
         android:textColor="@color/text_yellow"
@@ -18,7 +18,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="200.0dip"
-        android:background="@drawable/shape_dialog_center_selector">
+        android:background="@drawable/adapter_content_center_selector">
 
         <TextView
             android:id="@+id/tv_info"
@@ -33,7 +33,7 @@
         android:id="@+id/tv_ok"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape_dialog_bottom_selector"
+        android:background="@drawable/adapter_content_bottom_selector"
         android:gravity="center"
         android:padding="@dimen/margins_10"
         android:text="确定"
