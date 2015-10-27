@@ -6,6 +6,7 @@ import android.widget.ListView;
 
 import com.rainwii.zsyy.R;
 import com.rainwii.zsyy.activity.BaseActivity;
+import com.rainwii.zsyy.adapter.ExpertListAdapter;
 import com.rainwii.zsyy.bean.ExpertListIInfo;
 
 import java.util.ArrayList;

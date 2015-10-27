@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/mv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="60.0dip"
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/margins_10"
+            android:background="@drawable/bg_hospital_navigation_map"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ib_bus"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/btn_hospital_navigation_bus_selector" />
+
+            <ImageView
+                android:layout_width="1.0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/bg_dividing_line" />
+
+            <ImageButton
+                android:id="@+id/ib_driver"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/btn_hospital_navigation_driver_selector" />
+
+            <ImageView
+                android:layout_width="1.0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/bg_dividing_line" />
+
+            <ImageButton
+                android:id="@+id/ib_walk"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/btn_hospital_navigation_walk_selector" />
+        </RadioGroup>
+    </FrameLayout>
+</LinearLayout>

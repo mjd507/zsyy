@@ -25,4 +25,5 @@ dependencies {
     compile project(':ViewPagerIndicator_library')
     compile 'se.emilsjolander:stickylistheaders:2.7.0'
     compile project(':PullToRefresh_library')
+    compile files('libs/baidumapapi_base_v3_6_0.jar')
 }

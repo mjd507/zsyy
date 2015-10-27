@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_hospital"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:background="@null"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bg_hospital_description" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47.0dip"
+                android:background="@drawable/bg_hospital_description_button"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/ib_map_navigation"
+                    android:layout_width="0.0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="@null"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/btn_hospital_navigation_selector" />
+
+                <ImageView
+                    android:layout_width="1.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/bg_dividing_line" />
+
+                <ImageButton
+                    android:id="@+id/ib_floor_navigation"
+                    android:layout_width="0.0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="@null"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/btn_hospital_floor_selector" />
+
+                <ImageView
+                    android:layout_width="1.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/bg_dividing_line" />
+
+                <ImageButton
+                    android:id="@+id/ib_periphery_navigation"
+                    android:layout_width="0.0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="@null"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/btn_hospital_periphery_selector" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margins_10"
+                android:layout_marginRight="@dimen/margins_10"
+                android:layout_marginTop="@dimen/margins_20"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/adapter_content_top_selector"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/margins_40"
+                    android:padding="@dimen/margins_10"
+                    android:text="医院交通"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/adapter_content_bottom_selector"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/margins_40"
+                    android:padding="@dimen/margins_10"
+                    android:text="可乘坐公交K186路、62路、517路、K517（区间）路、18/K18路、208（夜间线）路、401路、45/K45路、591路、30路、30（大站线）路、68/K68路、14/K14路、60/K60路、212（夜间线）路、207（夜间线）路、31路、111路在苏大附二院站下。 "
+                    android:textColor="@color/text_83"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margins_15"
+                    android:background="@drawable/adapter_content_top_selector"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/margins_40"
+                    android:padding="@dimen/margins_10"
+                    android:text="官方网站"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/adapter_content_bottom_selector"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/margins_40"
+                    android:padding="@dimen/margins_10"
+                    android:text="http://www.sdfey.com/"
+                    android:textColor="#0000ff"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margins_15"
+                    android:background="@drawable/adapter_content_top_selector"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/margins_40"
+                    android:padding="@dimen/margins_10"
+                    android:text="联系电话"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/adapter_content_bottom_selector"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/margins_40"
+                    android:padding="@dimen/margins_10"
+                    android:text="0512-68282030"
+                    android:textColor="@color/text_83"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margins_15"
+                    android:background="@drawable/adapter_content_top_selector"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/margins_40"
+                    android:padding="@dimen/margins_10"
+                    android:text="特色科室"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/adapter_content_bottom_selector"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/margins_40"
+                    android:padding="@dimen/margins_10"
+                    android:text="神经外科 骨外科 普外科 泌尿外科 血管外科 整形美容外科 胸心外科 麻醉科"
+                    android:textColor="@color/text_83"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margins_15"
+                    android:background="@drawable/adapter_content_top_selector"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/margins_40"
+                    android:padding="@dimen/margins_10"
+                    android:text="医院介绍"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/adapter_content_bottom_selector"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/margins_40"
+                    android:padding="@dimen/margins_10"
+                    android:text="苏州大学附属第二医院始建于1988年，由中国核工业集团公司投资兴建，又名核工业总医院、中法友好医院、苏州市第六人民医院，是一所学科门类齐全、专业特色明显、技术设备先进、人才队伍雄厚、管理指标领先的现代化大型综合性教学医院。转瞬已经历整整26个春秋岁月。从最初的一抔泥土，到现在的集医疗、教学、科研、预防为一体的大型综合性三级甲等医院。立足苏州、辐射江苏、服务全国、影响海外。地理位置 苏州，位于中国东部沿海，距上海仅90公里。是一座以古典园林著称的美丽城市，人口一千两百多万人。医院本部位于苏州城西南，面对苏州市政府，紧邻家乐福超市和苏州市体育中心。占地面积7.6万平方米，现代化建筑面积17.5万平方米。向西近苏州高新区，北邻寒山寺、虎丘，南近石湖，附近有京杭大运河和环城高架快速路，交通快速便利。地址：三香路1055号邮编：215004"
+                    android:textColor="@color/text_83"
+                    android:textSize="@dimen/text_large" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

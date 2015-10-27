@@ -90,9 +90,15 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 22 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="baidumapapi_map_v3_6_0" level="project" />
+    <orderEntry type="library" exported="" name="baidumapapi_radar_v3_6_0" level="project" />
     <orderEntry type="library" exported="" name="support-v4-22.2.1" level="project" />
     <orderEntry type="library" exported="" name="stickylistheaders-2.7.0" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-22.2.1" level="project" />
+    <orderEntry type="library" exported="" name="baidumapapi_base_v3_6_0" level="project" />
+    <orderEntry type="library" exported="" name="baidumapapi_search_v3_6_0" level="project" />
+    <orderEntry type="library" exported="" name="baidumapapi_util_v3_6_0" level="project" />
+    <orderEntry type="library" exported="" name="baidumapapi_cloud_v3_6_0" level="project" />
     <orderEntry type="module" module-name="ViewPagerIndicator_library" exported="" />
     <orderEntry type="module" module-name="PullToRefresh_library" exported="" />
   </component>

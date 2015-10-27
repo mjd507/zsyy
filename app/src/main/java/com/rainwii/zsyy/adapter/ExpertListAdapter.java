@@ -1,4 +1,4 @@
-package com.rainwii.zsyy.activity.expert;
+package com.rainwii.zsyy.adapter;
 
 import android.content.Context;
 import android.view.View;

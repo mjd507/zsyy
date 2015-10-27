@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/mv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="60.0dip"
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/margins_10"
+            android:background="@drawable/bg_hospital_navigation_map"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_drug"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_hospital_location_drug_selector"
+                android:button="@null"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rb_hotel"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_hospital_location_hotel_selector"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/rb_bank"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_hospital_location_bank_selector"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/rb_ice"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_hospital_location_ice_selector"
+                android:button="@null" />
+        </RadioGroup>
+    </FrameLayout>
+</LinearLayout>

@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import com.rainwii.zsyy.R;
 import com.rainwii.zsyy.activity.call.CallMainActivity;
 import com.rainwii.zsyy.activity.expert.ExpertFacultyActivity;
-import com.rainwii.zsyy.activity.HomeModule6Activity;
+import com.rainwii.zsyy.activity.hospital.HospitalMainActivity;
 import com.rainwii.zsyy.activity.symptom.SymptomMainActivity;
 import com.rainwii.zsyy.activity.register.RegisterMainActivity;
 import com.rainwii.zsyy.activity.report.ReportMainActivity;
@@ -98,7 +98,7 @@ public class Main1Fragment extends BaseFragment {
                         enterActivity(ExpertFacultyActivity.class);
                         break;
                     case 5:     //Hospital Navigation
-                        enterActivity(HomeModule6Activity.class);
+                        enterActivity(HospitalMainActivity.class);
                         break;
                 }
             }
