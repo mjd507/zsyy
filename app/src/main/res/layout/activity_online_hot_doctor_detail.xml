@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_expert_detail_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/margins_10">
+
+        <ImageView
+            android:id="@+id/iv_photo"
+            android:layout_width="60.0dip"
+            android:layout_height="60.0dip"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_online_doctor_photo" />
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margins_10"
+            android:layout_marginRight="@dimen/margins_10"
+            android:layout_weight="1.0"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_large" />
+
+            <TextView
+                android:id="@+id/tv_position"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margins_5"
+                android:layout_marginTop="@dimen/margins_5"
+                android:textColor="@color/text_83"
+                android:textSize="@dimen/text_large" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@style/RatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:numStars="5"
+                android:stepSize="0.5" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_ask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_expert_register"
+            android:paddingLeft="@dimen/margins_20"
+            android:paddingRight="@dimen/margins_20"
+            android:text="咨询"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_large"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margins_10"
+            android:layout_marginRight="@dimen/margins_10"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margins_10"
+                android:background="@drawable/adapter_content_top_f9"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/margins_40"
+                android:padding="@dimen/margins_10"
+                android:text="擅长"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_large" />
+
+            <TextView
+                android:id="@+id/tv_skill"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/adapter_content_bottom_selector"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/margins_40"
+                android:padding="@dimen/margins_10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_large" />
+
+            <TextView
+                android:id="@+id/tv_comment"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margins_10"
+                android:background="@drawable/adapter_content_top_f9"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/margins_40"
+                android:padding="@dimen/margins_10"
+                android:text="用户评价"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_large"
+                android:visibility="visible" />
+
+            <com.rainwii.zsyy.view.MyListView
+                android:id="@+id/lv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margins_10"
+                android:background="@drawable/adapter_content_bottom_selector"
+                android:clickable="true"
+                android:divider="@null"
+                android:listSelector="#00000000"
+                android:paddingBottom="@dimen/margins_5"
+                android:paddingLeft="0.5dip"
+                android:paddingRight="0.5dip"
+                android:paddingTop="1.0dip"
+                android:visibility="visible" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

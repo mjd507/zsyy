@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_margin="@dimen/margins_10"
+        android:layout_weight="1.0"
+        android:background="@drawable/bg_search_edit"
+        android:gravity="top"
+        android:hint="请详细描述年龄、性别、症状、检查结果等信息，以便获得更好的帮助。(限500字)"
+        android:maxLength="500"
+        android:padding="@dimen/margins_5"
+        android:textSize="@dimen/text_large" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margins_10"
+            android:layout_marginRight="@dimen/margins_10"
+            android:layout_marginTop="20.0dip"
+            android:background="@drawable/bg_search_edit"
+            android:orientation="horizontal"
+            android:paddingTop="20.0dip">
+
+            <FrameLayout
+                android:id="@+id/fm1"
+                android:layout_width="70.0dip"
+                android:layout_height="80.0dip"
+                android:layout_marginLeft="13.0dip"
+                android:layout_marginTop="3.0dip"
+                android:visibility="invisible">
+
+                <ImageView
+                    android:id="@+id/iv_pic_1"
+                    android:layout_width="60.0dip"
+                    android:layout_height="60.0dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10.0dip"
+                    android:contentDescription="@string/app_name" />
+
+                <ImageView
+                    android:id="@+id/iv_del_1"
+                    android:layout_width="30.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_gravity="top|right|center"
+                    android:background="@drawable/ic_online_ask_question_delete"
+                    android:contentDescription="@string/app_name" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fm2"
+                android:layout_width="70.0dip"
+                android:layout_height="80.0dip"
+                android:layout_marginLeft="13.0dip"
+                android:layout_marginTop="3.0dip"
+                android:visibility="invisible">
+
+                <ImageView
+                    android:id="@+id/iv_pic_2"
+                    android:layout_width="60.0dip"
+                    android:layout_height="60.0dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10.0dip"
+                    android:contentDescription="@string/app_name" />
+
+                <ImageView
+                    android:id="@+id/iv_del_2"
+                    android:layout_width="30.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_gravity="top|right|center"
+                    android:background="@drawable/ic_online_ask_question_delete"
+                    android:contentDescription="@string/app_name" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fm3"
+                android:layout_width="70.0dip"
+                android:layout_height="80.0dip"
+                android:layout_marginLeft="13.0dip"
+                android:layout_marginTop="3.0dip"
+                android:visibility="invisible">
+
+                <ImageView
+                    android:id="@+id/iv_pic_3"
+                    android:layout_width="60.0dip"
+                    android:layout_height="60.0dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10.0dip"
+                    android:contentDescription="@string/app_name" />
+
+                <ImageView
+                    android:id="@+id/iv_del_3"
+                    android:layout_width="30.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_gravity="top|right|center"
+                    android:background="@drawable/ic_online_ask_question_delete"
+                    android:contentDescription="@string/app_name" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/iv_add"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_gravity="center_horizontal"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/btn_online_ask_question_selector" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margins_10"
+        android:background="@drawable/color_btn_bg_selector"
+        android:enabled="false"
+        android:minHeight="@dimen/item_height"
+        android:text="提交"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/title_text_size" />
+</LinearLayout>

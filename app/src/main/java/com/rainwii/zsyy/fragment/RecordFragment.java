@@ -12,10 +12,10 @@ import com.rainwii.zsyy.R;
  * 作者 mjd
  * 日期：2015/10/12 9:08
  */
-public class Main2Fragment extends BaseFragment {
+public class RecordFragment extends BaseFragment {
     @Override
     protected View initViews(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_main_2, null);
+        View view = inflater.inflate(R.layout.fragment_main_4, null);
         return view;
     }
 

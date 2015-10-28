@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margins_10"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="2"
+            android:paddingBottom="@dimen/margins_5"
+            android:paddingLeft="@dimen/margins_10"
+            android:paddingRight="@dimen/margins_10"
+            android:paddingTop="@dimen/margins_10"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_large" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_online_new_question"
+            android:orientation="vertical"
+            android:padding="@dimen/margins_10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margins_10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/tv_photo"
+                    android:layout_width="40.0dip"
+                    android:layout_height="40.0dip"
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_online_doctor_photo" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margins_10"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_largest" />
+
+                        <TextView
+                            android:id="@+id/tv_position"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margins_10"
+                            android:layout_weight="1.0"
+                            android:textColor="@color/text_83"
+                            android:textSize="@dimen/text_large" />
+
+                        <TextView
+                            android:id="@+id/tv_create_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margins_10"
+                            android:textColor="@color/text_83"
+                            android:textSize="@dimen/text_large" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_department"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margins_3"
+                        android:singleLine="true"
+                        android:textColor="@color/text_38"
+                        android:textSize="@dimen/text_large" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_reply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:paddingTop="@dimen/margins_10"
+                android:textColor="@color/text_38"
+                android:textSize="@dimen/text_large" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

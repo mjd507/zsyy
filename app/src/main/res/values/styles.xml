@@ -68,4 +68,22 @@
         <item name="android:minHeight">16.0dip</item>
     </style>
 
+
+    <!--图文咨询 主页面的tab样式-->
+    <style name="MyIndicatorStyle" parent="AppTheme">
+        <item name="vpiTabPageIndicatorStyle">@style/Widget.MyTabPageIndicator</item>
+    </style>
+
+    <style name="Widget.MyTabPageIndicator" parent="Widget.TabPageIndicator">
+        <item name="android:textSize">@dimen/text_large</item>
+        <item name="android:paddingLeft">@dimen/space_largest</item>
+        <item name="android:paddingRight">@dimen/space_largest</item>
+        <item name="android:textAppearance">@style/MyTextStyle</item>
+        <item name="android:background">@drawable/adapter_vpi_bg_selector</item>//修改页签背景
+    </style>
+
+    <style name="MyTextStyle" parent="TextAppearance.TabPageIndicator">
+        <item name="android:textColor">@drawable/adapter_vpi_text_selector</item>//修改页签字体颜色
+    </style>
+
 </resources>

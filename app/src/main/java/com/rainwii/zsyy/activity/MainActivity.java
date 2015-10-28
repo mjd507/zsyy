@@ -5,10 +5,10 @@ import android.view.View;
 import android.widget.RadioGroup;
 
 import com.rainwii.zsyy.R;
-import com.rainwii.zsyy.fragment.Main1Fragment;
-import com.rainwii.zsyy.fragment.Main2Fragment;
-import com.rainwii.zsyy.fragment.Main3Fragment;
-import com.rainwii.zsyy.fragment.Main4Fragment;
+import com.rainwii.zsyy.fragment.HomeFragment;
+import com.rainwii.zsyy.fragment.ServiceFragment;
+import com.rainwii.zsyy.fragment.SubscribeFragment;
+import com.rainwii.zsyy.fragment.RecordFragment;
 import com.rainwii.zsyy.utils.ToastUtils;
 
 
@@ -18,10 +18,10 @@ import com.rainwii.zsyy.utils.ToastUtils;
 public class MainActivity extends BaseActivity {
     private RadioGroup rgMain;
 
-    private Main1Fragment main1Fragment;
-    private Main2Fragment main2Fragment;
-    private Main3Fragment main3Fragment;
-    private Main4Fragment main4Fragment;
+    private HomeFragment homeFragment;
+    private ServiceFragment serviceFragment;
+    private SubscribeFragment subscribeFragment;
+    private RecordFragment recordFragment;
 
     @Override
     protected void initViews() {
@@ -66,35 +66,35 @@ public class MainActivity extends BaseActivity {
         hideFragments(transaction);
         switch (index) {
             case 0:
-                if (main1Fragment == null) {
-                    main1Fragment = new Main1Fragment();
-                    transaction.add(R.id.fl_main, main1Fragment);
+                if (homeFragment == null) {
+                    homeFragment = new HomeFragment();
+                    transaction.add(R.id.fl_main, homeFragment);
                 } else {
-                    transaction.show(main1Fragment);
+                    transaction.show(homeFragment);
                 }
                 break;
             case 1:
-                if (main2Fragment == null) {
-                    main2Fragment = new Main2Fragment();
-                    transaction.add(R.id.fl_main, main2Fragment);
+                if (serviceFragment == null) {
+                    serviceFragment = new ServiceFragment();
+                    transaction.add(R.id.fl_main, serviceFragment);
                 } else {
-                    transaction.show(main2Fragment);
+                    transaction.show(serviceFragment);
                 }
                 break;
             case 2:
-                if (main3Fragment == null) {
-                    main3Fragment = new Main3Fragment();
-                    transaction.add(R.id.fl_main, main3Fragment);
+                if (subscribeFragment == null) {
+                    subscribeFragment = new SubscribeFragment();
+                    transaction.add(R.id.fl_main, subscribeFragment);
                 } else {
-                    transaction.show(main3Fragment);
+                    transaction.show(subscribeFragment);
                 }
                 break;
             case 3:
-                if (main4Fragment == null) {
-                    main4Fragment = new Main4Fragment();
-                    transaction.add(R.id.fl_main, main4Fragment);
+                if (recordFragment == null) {
+                    recordFragment = new RecordFragment();
+                    transaction.add(R.id.fl_main, recordFragment);
                 } else {
-                    transaction.show(main4Fragment);
+                    transaction.show(recordFragment);
                 }
                 break;
         }
@@ -105,17 +105,17 @@ public class MainActivity extends BaseActivity {
      * 隐藏所有fragment
      */
     private void hideFragments(FragmentTransaction transaction) {
-        if (main1Fragment != null) {
-            transaction.hide(main1Fragment);
+        if (homeFragment != null) {
+            transaction.hide(homeFragment);
         }
-        if (main2Fragment != null) {
-            transaction.hide(main2Fragment);
+        if (serviceFragment != null) {
+            transaction.hide(serviceFragment);
         }
-        if (main3Fragment != null) {
-            transaction.hide(main3Fragment);
+        if (subscribeFragment != null) {
+            transaction.hide(subscribeFragment);
         }
-        if (main4Fragment != null) {
-            transaction.hide(main4Fragment);
+        if (recordFragment != null) {
+            transaction.hide(recordFragment);
         }
     }
 

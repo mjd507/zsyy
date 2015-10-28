@@ -28,18 +28,18 @@ import java.util.List;
  * 作者 mjd
  * 日期：2015/10/12 9:08
  */
-public class Main1Fragment extends BaseFragment {
+public class HomeFragment extends BaseFragment {
     private ViewPager vpShuffle;
     private MyGridView gvMainModules;
     private CirclePageIndicator indicator;
 
     @Override
     protected View initViews(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_main_1, null);
+        View view = inflater.inflate(R.layout.fragment_home, null);
         setTitle(view, "掌上医院");
         vpShuffle = (ViewPager) view.findViewById(R.id.vp_shuffle);
         indicator = (CirclePageIndicator) view.findViewById(R.id.indicator);
-        gvMainModules = (MyGridView) view.findViewById(R.id.gv_main_modules);
+        gvMainModules = (MyGridView) view.findViewById(R.id.gv_modules);
         return view;
     }
 

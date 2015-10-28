@@ -36,7 +36,7 @@
             </RelativeLayout>
 
             <com.rainwii.zsyy.view.MyGridView
-                android:id="@+id/gv_main_modules"
+                android:id="@+id/gv_modules"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:horizontalSpacing="@dimen/space_small"

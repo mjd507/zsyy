@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margins_10"
+                android:layout_marginRight="@dimen/margins_10"
+                android:layout_marginTop="@dimen/margins_20"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_action_1"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:drawablePadding="@dimen/margins_10"
+                    android:drawableTop="@drawable/ic_service_1"
+                    android:gravity="center_horizontal"
+                    android:text="图文咨询"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/tv_action_2"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:drawablePadding="@dimen/margins_10"
+                    android:drawableTop="@drawable/ic_service_2"
+                    android:gravity="center_horizontal"
+                    android:text="邮寄报告单"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_action_3"-->
+                <!--android:layout_width="0.0dip"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1.0"-->
+                <!--android:drawablePadding="@dimen/margins_10"-->
+                <!--android:drawableTop="@drawable/ic_service_3"-->
+                <!--android:gravity="center_horizontal"-->
+                <!--android:text="营养订餐"-->
+                <!--android:textColor="@color/text_38"-->
+                <!--android:textSize="@dimen/text_large"-->
+                <!--android:visibility="gone" />-->
+
+                <TextView
+                    android:id="@+id/tv_action_4"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:drawablePadding="@dimen/margins_10"
+                    android:drawableTop="@drawable/ic_service_4"
+                    android:gravity="center_horizontal"
+                    android:text="体检套餐"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margins_10"
+                android:layout_marginRight="@dimen/margins_10"
+                android:layout_marginTop="@dimen/margins_20"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_action_5"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:drawablePadding="@dimen/margins_10"
+                    android:drawableTop="@drawable/ic_service_5"
+                    android:gravity="center_horizontal"
+                    android:text="结对医生"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/tv_action_6"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:drawablePadding="@dimen/margins_10"
+                    android:drawableTop="@drawable/ic_service_6"
+                    android:gravity="center_horizontal"
+                    android:text="健康宣教"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/tv_action_8"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:drawablePadding="@dimen/margins_10"
+                    android:drawableTop="@drawable/ic_service_8"
+                    android:gravity="center_horizontal"
+                    android:text="健康百科"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margins_10"
+                android:layout_marginRight="@dimen/margins_10"
+                android:layout_marginTop="@dimen/margins_20"
+                android:orientation="horizontal"
+                android:weightSum="3.0">
+
+                <TextView
+                    android:id="@+id/tv_action_9"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:drawablePadding="@dimen/margins_10"
+                    android:drawableTop="@drawable/ic_service_9"
+                    android:gravity="center_horizontal"
+                    android:text="手术动态"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
