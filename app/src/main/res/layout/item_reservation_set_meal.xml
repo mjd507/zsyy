@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margins_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margins_10"
+        android:paddingTop="@dimen/margins_10">
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="60.0dip"
+            android:layout_height="60.0dip"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_reservation_type_1" />
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margins_10"
+            android:layout_weight="1.0"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_largest" />
+
+                <TextView
+                    android:id="@+id/tv_belong"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margins_10"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/list_divider"
+                android:contentDescription="@string/app_name" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margins_5"
+                android:layout_marginTop="@dimen/margins_5"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_man_cost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margins_10"
+                        android:drawableLeft="@drawable/bg_register_treate_card_man"
+                        android:drawablePadding="@dimen/margins_5"
+                        android:singleLine="true"
+                        android:textColor="@color/text_38"
+                        android:textSize="@dimen/text_small"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/tv_women_cost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/bg_register_treate_card_women"
+                        android:drawablePadding="@dimen/margins_5"
+                        android:singleLine="true"
+                        android:textColor="@color/text_38"
+                        android:textSize="@dimen/text_small"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查看详情"
+                    android:textColor="@color/bg_title"
+                    android:textSize="@dimen/text_small" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margins_10"
+        android:background="@drawable/adapter_content_one_f9"
+        android:lines="5"
+        android:padding="@dimen/margins_10"
+        android:textColor="@color/text_38"
+        android:textSize="@dimen/text_large" />
+</LinearLayout>

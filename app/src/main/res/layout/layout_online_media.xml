@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_online_location_share_group_dlg"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/recode_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:indeterminateDrawable="@drawable/shape_my_progressbar_2" />
+
+    <LinearLayout
+        android:id="@+id/recode_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="60.0dip"
+            android:layout_height="90.0dip"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_voice_rcd_hint" />
+
+        <ImageView
+            android:id="@+id/mvVolume"
+            android:layout_width="60.0dip"
+            android:layout_height="90.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_amp1" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/cancel_image"
+        android:layout_width="130.0dip"
+        android:layout_height="90.0dip"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_rcd_cancel_icon"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/short_image"
+        android:layout_width="130.0dip"
+        android:layout_height="90.0dip"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_voice_to_short"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/recode_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5.0dip"
+        android:text="手指上滑，取消发送"
+        android:textColor="#ffffffff" />
+</LinearLayout>

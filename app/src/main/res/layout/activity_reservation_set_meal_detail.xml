@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_expert_detail_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/margins_10">
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="60.0dip"
+            android:layout_height="60.0dip"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_reservation_type_1" />
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margins_10"
+            android:layout_marginRight="@dimen/margins_10"
+            android:layout_weight="1.0"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_large" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margins_5"
+                android:layout_marginTop="@dimen/margins_5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_man_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margins_10"
+                    android:drawableLeft="@drawable/bg_register_treate_card_man"
+                    android:drawablePadding="@dimen/margins_5"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_small"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tv_women_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/bg_register_treate_card_women"
+                    android:drawablePadding="@dimen/margins_5"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_small"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/margins_10"
+            android:paddingRight="@dimen/margins_10">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margins_10"
+                android:background="@drawable/adapter_content_top_f9"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/margins_40"
+                android:padding="@dimen/margins_10"
+                android:text="临床检查"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_largest" />
+
+            <TextView
+                android:id="@+id/tv_lcjc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/adapter_content_bottom_selector"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/margins_40"
+                android:padding="@dimen/margins_10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_large" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margins_10"
+                android:background="@drawable/adapter_content_top_f9"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/margins_40"
+                android:padding="@dimen/margins_10"
+                android:text="适合人群"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_largest" />
+
+            <TextView
+                android:id="@+id/tv_belong"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/adapter_content_bottom_selector"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/margins_40"
+                android:padding="@dimen/margins_10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_large" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margins_10"
+                android:background="@drawable/adapter_content_top_f9"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/margins_40"
+                android:padding="@dimen/margins_10"
+                android:text="实验室检查"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_largest" />
+
+            <TextView
+                android:id="@+id/tv_sysjc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/adapter_content_bottom_selector"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/margins_40"
+                android:padding="@dimen/margins_10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_large" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margins_10"
+                android:background="@drawable/adapter_content_top_f9"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/margins_40"
+                android:padding="@dimen/margins_10"
+                android:text="仪器检查"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_largest" />
+
+            <TextView
+                android:id="@+id/tv_yqjc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/adapter_content_bottom_selector"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/margins_40"
+                android:padding="@dimen/margins_10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_large" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margins_10"
+                android:background="@drawable/adapter_content_top_f9"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/margins_40"
+                android:padding="@dimen/margins_10"
+                android:text="其他"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_largest" />
+
+            <TextView
+                android:id="@+id/tv_other"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margins_10"
+                android:background="@drawable/adapter_content_bottom_selector"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/margins_40"
+                android:padding="@dimen/margins_10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_large" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

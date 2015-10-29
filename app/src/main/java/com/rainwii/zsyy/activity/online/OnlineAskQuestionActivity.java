@@ -79,7 +79,7 @@ public class OnlineAskQuestionActivity extends BaseActivity {
 
     @Override
     protected void initListeners() {
-
+        btnSubmit.setOnClickListener(this);
     }
 
     @Override

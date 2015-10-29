@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/online_input_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_online_talk_bottom"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="4.0dip"
+        android:paddingLeft="4.0dip"
+        android:paddingRight="4.0dip"
+        android:paddingTop="4.0dip">
+
+        <Button
+            android:id="@+id/add_tool"
+            android:layout_width="35.0dip"
+            android:layout_height="35.0dip"
+            android:layout_marginLeft="4.0dip"
+            android:layout_marginRight="@dimen/margins_5"
+            android:background="@drawable/btn_news_send_add_selector" />
+
+        <EditText
+            android:id="@+id/talk_edit"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margins_5"
+            android:layout_weight="1.0"
+            android:background="@drawable/bg_search_edit"
+            android:hint="请输入聊天内容"
+            android:minHeight="35.0dip"
+            android:textSize="@dimen/text_large" />
+
+        <Button
+            android:id="@+id/talk_send"
+            android:layout_width="45.0dip"
+            android:layout_height="35.0dip"
+            android:layout_marginLeft="4.0dip"
+            android:layout_marginRight="4.0dip"
+            android:background="@drawable/color_btn_bg_selector"
+            android:enabled="false"
+            android:minHeight="35.0dip"
+            android:minWidth="45.0dip"
+            android:text="发 送"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_large" />
+    </LinearLayout>
+</LinearLayout>

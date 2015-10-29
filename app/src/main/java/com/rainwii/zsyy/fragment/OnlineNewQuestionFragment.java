@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.rainwii.zsyy.R;
+import com.rainwii.zsyy.activity.online.OnlineQuestionTalkActivity;
 import com.rainwii.zsyy.adapter.OnlineNewQuestionAdapter;
 import com.rainwii.zsyy.bean.OnlineNewQuestion;
 
@@ -45,7 +46,7 @@ public class OnlineNewQuestionFragment extends BaseFragment {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+                enterActivity(OnlineQuestionTalkActivity.class);
             }
         });
     }

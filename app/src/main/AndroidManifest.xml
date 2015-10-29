@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.rainwii.zsyy">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
@@ -142,6 +143,10 @@
             android:screenOrientation="portrait"
             android:theme="@style/MyIndicatorStyle" />
         <activity
+            android:name=".activity.online.OnlineQuestionTalkActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyIndicatorStyle" />
+        <activity
             android:name=".activity.online.OnlineAskQuestionActivity"
             android:screenOrientation="portrait" />
         <activity
@@ -151,6 +156,13 @@
             android:name=".activity.online.OnlineFacultyDoctorListActivity"
             android:screenOrientation="portrait" />
         <!-- 图文咨询 end-->
+
+        <!-- 体检套餐 start-->
+        <activity android:name=".activity.reservation.ReservationSetMealActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.reservation.ReservationSetMealDetailActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 体检套餐 end-->
 
         <service
             android:name="com.baidu.location.f"

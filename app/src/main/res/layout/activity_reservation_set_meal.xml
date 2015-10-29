@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_tip"
+        android:drawableLeft="@drawable/ic_expert_tip"
+        android:drawablePadding="@dimen/margins_5"
+        android:paddingBottom="@dimen/margins_10"
+        android:paddingLeft="@dimen/margins_10"
+        android:paddingRight="@dimen/margins_10"
+        android:paddingTop="@dimen/margins_10"
+        android:text="暂不支持app预约，点此拨打预约电话"
+        android:textColor="@color/text_tip"
+        android:textSize="@dimen/text_small" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <include layout="@layout/layout_listview" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/bg_reservation_list" />
+    </FrameLayout>
+
+</LinearLayout>

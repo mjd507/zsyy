@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import com.rainwii.zsyy.R;
 import com.rainwii.zsyy.activity.online.OnlineMainActivity;
+import com.rainwii.zsyy.activity.reservation.ReservationSetMealActivity;
+import com.rainwii.zsyy.bean.ReservationSetMeal;
 
 /**
  * 描述：
@@ -62,6 +64,7 @@ public class ServiceFragment extends BaseFragment {
             case R.id.tv_action_2:
                 break;
             case R.id.tv_action_4:
+                enterActivity(ReservationSetMealActivity.class);
                 break;
             case R.id.tv_action_5:
                 break;
