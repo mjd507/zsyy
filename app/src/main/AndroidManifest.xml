@@ -158,11 +158,25 @@
         <!-- 图文咨询 end-->
 
         <!-- 体检套餐 start-->
-        <activity android:name=".activity.reservation.ReservationSetMealActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".activity.reservation.ReservationSetMealDetailActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.reservation.ReservationSetMealActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.reservation.ReservationSetMealDetailActivity"
+            android:screenOrientation="portrait" />
         <!-- 体检套餐 end-->
+
+        <!-- 健康宣教 start-->
+        <activity
+            android:name=".activity.education.EducationMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.education.EducationSecondActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.education.EducationDetailActivity"
+            android:screenOrientation="portrait" />
+        <!-- 健康宣教 end-->
 
         <service
             android:name="com.baidu.location.f"

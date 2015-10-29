@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.rainwii.zsyy.R;
+import com.rainwii.zsyy.activity.education.EducationMainActivity;
 import com.rainwii.zsyy.activity.online.OnlineMainActivity;
 import com.rainwii.zsyy.activity.reservation.ReservationSetMealActivity;
 import com.rainwii.zsyy.bean.ReservationSetMeal;
@@ -69,6 +70,7 @@ public class ServiceFragment extends BaseFragment {
             case R.id.tv_action_5:
                 break;
             case R.id.tv_action_6:
+                enterActivity(EducationMainActivity.class);
                 break;
             case R.id.tv_action_8:
                 break;
