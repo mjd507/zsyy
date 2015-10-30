@@ -4,7 +4,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 
 import com.rainwii.zsyy.R;
-import com.rainwii.zsyy.activity.BaseActivity;
+import com.rainwii.zsyy.activity.base.BaseActivity;
 import com.rainwii.zsyy.fragment.SymptomPhotoFragment;
 import com.rainwii.zsyy.fragment.SymptomTextFragment;
 

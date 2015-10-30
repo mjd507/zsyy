@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.rainwii.zsyy.R;
-import com.rainwii.zsyy.activity.BaseActivity;
+import com.rainwii.zsyy.activity.base.BaseActivity;
 import com.rainwii.zsyy.constants.Constants;
 
 /**

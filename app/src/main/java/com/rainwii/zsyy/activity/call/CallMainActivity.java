@@ -7,7 +7,7 @@ import android.widget.LinearLayout;
 
 import com.handmark.pulltorefresh.library.PullToRefreshScrollView;
 import com.rainwii.zsyy.R;
-import com.rainwii.zsyy.activity.BaseActivity;
+import com.rainwii.zsyy.activity.base.BaseActivity;
 import com.rainwii.zsyy.adapter.CallAdapter;
 import com.rainwii.zsyy.bean.Call;
 import com.rainwii.zsyy.utils.DateUtils;

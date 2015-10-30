@@ -1,16 +1,11 @@
 package com.rainwii.zsyy.activity.education;
 
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.rainwii.zsyy.R;
-import com.rainwii.zsyy.activity.BaseActivity;
-import com.rainwii.zsyy.adapter.EducationAdapter;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.rainwii.zsyy.activity.base.BaseActivity;
 
 /**
  * 描述：健康宣教

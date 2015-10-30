@@ -9,16 +9,13 @@ import android.widget.ImageButton;
 //import com.baidu.location.LocationClientOption;
 import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.map.BaiduMap;
-import com.baidu.mapapi.map.BitmapDescriptor;
 import com.baidu.mapapi.map.MapStatus;
 import com.baidu.mapapi.map.MapStatusUpdate;
 import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.MapView;
-import com.baidu.mapapi.map.MyLocationConfiguration.LocationMode;
-import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.model.LatLng;
 import com.rainwii.zsyy.R;
-import com.rainwii.zsyy.activity.BaseActivity;
+import com.rainwii.zsyy.activity.base.BaseActivity;
 
 /**
  * 描述：地图导航

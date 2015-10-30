@@ -3,7 +3,7 @@ package com.rainwii.zsyy.activity.symptom;
 import android.view.View;
 
 import com.rainwii.zsyy.R;
-import com.rainwii.zsyy.activity.BaseActivity;
+import com.rainwii.zsyy.activity.base.BaseActivity;
 
 /**
  * 描述：智能导诊 --> 可能疾病列表

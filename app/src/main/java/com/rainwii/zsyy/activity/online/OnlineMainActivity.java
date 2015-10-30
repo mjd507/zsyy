@@ -4,7 +4,7 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 
 import com.rainwii.zsyy.R;
-import com.rainwii.zsyy.activity.BaseActivity;
+import com.rainwii.zsyy.activity.base.BaseActivity;
 import com.rainwii.zsyy.adapter.OnlineMainAdapter;
 import com.rainwii.zsyy.fragment.BaseFragment;
 import com.rainwii.zsyy.fragment.OnlineNewQuestionFragment;

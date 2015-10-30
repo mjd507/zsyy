@@ -32,5 +32,6 @@
     <color name="text_be">#ffbebebe</color>
     <color name="text_zhongse">#ffb08227</color>
 
+    <color name="bg_background">#ffebeff0</color>
 
 </resources>

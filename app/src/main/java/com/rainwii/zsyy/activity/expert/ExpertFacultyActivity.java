@@ -5,7 +5,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.rainwii.zsyy.R;
-import com.rainwii.zsyy.activity.BaseActivity;
+import com.rainwii.zsyy.activity.base.BaseActivity;
 import com.rainwii.zsyy.adapter.ExpertFacultyAdapter;
 
 import java.util.ArrayList;

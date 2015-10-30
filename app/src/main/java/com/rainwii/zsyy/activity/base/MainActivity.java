@@ -1,4 +1,4 @@
-package com.rainwii.zsyy.activity;
+package com.rainwii.zsyy.activity.base;
 
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;

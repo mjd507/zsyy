@@ -8,11 +8,11 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.rainwii.zsyy.R;
-import com.rainwii.zsyy.activity.BaseActivity;
+import com.rainwii.zsyy.activity.base.BaseActivity;
 import com.rainwii.zsyy.activity.register.RegisterInfoActivity;
 import com.rainwii.zsyy.bean.RegisterExpertInfo;
 import com.rainwii.zsyy.constants.Constants;
-import com.rainwii.zsyy.utils.SharedPreferencesUtils;
+import com.rainwii.zsyy.utils.SPUtils;
 
 /**
  * 描述：专家排班 --> 工作表
@@ -92,7 +92,7 @@ public class ExpertScheduleActivity extends BaseActivity {
     protected void handleClick(View view) {
         switch (view.getId()) {
             case R.id.btn_order:
-                SharedPreferencesUtils.putString(this,Constants.REGISTER_TYPE,"专家号预约");
+                SPUtils.putString(this, Constants.REGISTER_TYPE, "专家号预约");
                 Bundle bundle = new Bundle();
                 RegisterExpertInfo info = new RegisterExpertInfo(1, "2015-10-30 星期五", "华佗", "主治医师", "祖籍江苏东台", true, true, "100", "2个号");
                 bundle.putSerializable(Constants.REGISTER_EXPERT_SCHEDULE,info);

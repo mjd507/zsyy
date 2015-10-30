@@ -2,11 +2,14 @@ package com.rainwii.zsyy.fragment;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -21,13 +24,15 @@ import com.rainwii.zsyy.activity.symptom.SymptomPossibleSymptomActivity;
 import com.rainwii.zsyy.adapter.SymptomAgeAdapter;
 import com.rainwii.zsyy.constants.Constants;
 import com.rainwii.zsyy.utils.LogUtils;
+import com.rainwii.zsyy.utils.ToastUtils;
 
 /**
  * 描述：智能导诊 --> 图片导诊
  * 作者 mjd
  * 日期：2015/10/20 17:27
  */
-public class SymptomPhotoFragment extends BaseFragment {
+public class SymptomPhotoFragment extends BaseFragment implements View.OnTouchListener {
+    private static final String TAG = "SymptomPhotoFragment";
     private ImageView ivPhotoRear;
     private ImageView ivPhotoFront;
     private ImageView ivInfo;
@@ -37,18 +42,35 @@ public class SymptomPhotoFragment extends BaseFragment {
     private PopupWindow popupWindow;
 
     private boolean isFront = true;    //默认是正面
+    private View rootView;
+    private float viewHeight;
+    private float viewWidth;
+    private Bitmap bitmapFront;
+    private Bitmap bitmapRear;
 
     @Override
     protected View initViews(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_symptom_photo, null);
-        ivPhotoRear = (ImageView) view.findViewById(R.id.iv_symptom_photo_rear);
-        ivPhotoFront = (ImageView) view.findViewById(R.id.iv_symptom_photo_front);
-        ivInfo = (ImageView) view.findViewById(R.id.iv_info);
-        cbSex = (CheckBox) view.findViewById(R.id.cb_symptom_sex);
-        btnAge = (Button) view.findViewById(R.id.btn_symptom_age);
-        btnFlip = (Button) view.findViewById(R.id.btn_symptom_body_flip);
-        return view;
+        rootView = inflater.inflate(R.layout.fragment_symptom_photo, null);
+        ivPhotoRear = (ImageView) rootView.findViewById(R.id.iv_symptom_photo_rear);
+        ivPhotoFront = (ImageView) rootView.findViewById(R.id.iv_symptom_photo_front);
+        ivInfo = (ImageView) rootView.findViewById(R.id.iv_info);
+        cbSex = (CheckBox) rootView.findViewById(R.id.cb_symptom_sex);
+        btnAge = (Button) rootView.findViewById(R.id.btn_symptom_age);
+        btnFlip = (Button) rootView.findViewById(R.id.btn_symptom_body_flip);
+        rootView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                rootView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+                viewWidth = rootView.getWidth();
+                viewHeight = rootView.getHeight();
+                LogUtils.e(TAG, "rootView: width:" + viewWidth + " height:" + viewHeight);
+            }
+        });
+        bitmapFront = ((BitmapDrawable) (ivPhotoFront.getDrawable())).getBitmap();
+        bitmapRear = ((BitmapDrawable) (ivPhotoRear.getDrawable())).getBitmap();
+        return rootView;
     }
+
 
     @Override
     protected void initData() {
@@ -73,8 +95,8 @@ public class SymptomPhotoFragment extends BaseFragment {
         btnFlip.setOnClickListener(this);
         ivInfo.setOnClickListener(this);
 
-        ivPhotoFront.setOnClickListener(this);
-        ivPhotoRear.setOnClickListener(this);
+        ivPhotoFront.setOnTouchListener(this);
+        ivPhotoRear.setOnTouchListener(this);
     }
 
     @Override
@@ -89,18 +111,13 @@ public class SymptomPhotoFragment extends BaseFragment {
             case R.id.iv_info:
                 showHintDialog();
                 break;
-            case R.id.iv_symptom_photo_front:
-                enterPossibleDiseaseActivity();
-                break;
-            case R.id.iv_symptom_photo_rear:
-                enterPossibleDiseaseActivity();
-                break;
         }
     }
 
-    private void enterPossibleDiseaseActivity() {
+
+    private void enterPossibleDiseaseActivity(String body) {
         Bundle bundle = new Bundle();
-        bundle.putString(Constants.BODY_AREA, "四肢");
+        bundle.putString(Constants.BODY_AREA, body);
         enterActivity(SymptomPossibleSymptomActivity.class, bundle);
     }
 
@@ -166,6 +183,159 @@ public class SymptomPhotoFragment extends BaseFragment {
             popupWindow.setBackgroundDrawable(new BitmapDrawable());
         }
         popupWindow.showAsDropDown(btnAge);
+    }
+
+
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        switch (v.getId()) {
+            case R.id.iv_symptom_photo_front:
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        float curX = event.getX();
+                        float curY = event.getY();
+                        if (bitmapFront.getPixel((int) curX, (int) curY) == 0) {
+                            ToastUtils.showShort(getActivity(), "透明");
+                            return true;
+                        }
+                        LogUtils.e(TAG, "curX:" + curX + " curY:" + curY);
+                        if (isInFaceArea(curX, curY)) {
+                            ToastUtils.showShort(getActivity(), "面部");
+                        } else if (isInChestArea(curX, curY)) {
+                            ToastUtils.showShort(getActivity(), "胸部");
+                        } else if (isInAbdomenArea(curX, curY)) {
+                            ToastUtils.showShort(getActivity(), "腹部");
+                        } else if (isInPerinaeumArea(curX, curY)) {
+                            ToastUtils.showShort(getActivity(), "会阴");
+                        } else if (isInArmArea(curX, curY)) {
+                            ToastUtils.showShort(getActivity(), "手臂");
+                        }else if(isInLegArea(curX,curY)){
+                            ToastUtils.showShort(getActivity(), "腿部");
+                        }
+                        break;
+                    case MotionEvent.ACTION_MOVE:
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        break;
+                }
+                break;
+            case R.id.iv_symptom_photo_rear:
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        float curX = event.getX();
+                        float curY = event.getY();
+                        if (bitmapRear.getPixel((int) curX, (int) curY) == 0) {
+                            ToastUtils.showShort(getActivity(), "透明");
+                            return true;
+                        }
+                        LogUtils.e(TAG, "curX:" + curX + " curY:" + curY);
+                        if (isInFaceArea(curX, curY)) {
+                            ToastUtils.showShort(getActivity(), "面部");
+                        } else if (isInChestArea(curX, curY)) {
+                            ToastUtils.showShort(getActivity(), "胸部");
+                        } else if (isInAbdomenArea(curX, curY)) {
+                            ToastUtils.showShort(getActivity(), "腹部");
+                        } else if (isInPerinaeumArea(curX, curY)) {
+                            ToastUtils.showShort(getActivity(), "会阴");
+                        } else if (isInArmArea(curX, curY)) {
+                            ToastUtils.showShort(getActivity(), "手臂");
+                        }else if(isInLegArea(curX,curY)){
+                            ToastUtils.showShort(getActivity(), "腿部");
+                        }
+                        break;
+                    case MotionEvent.ACTION_MOVE:
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        break;
+                }
+                break;
+
+        }
+        return true;
+    }
+
+    private boolean isInFaceArea(float x, float y) {
+        float X1 = viewWidth * 260 / 638;
+        float X2 = viewWidth * 363 / 638;
+        float Y1 = viewHeight * 40 / 1160;
+        float Y2 = viewHeight * 180 / 1160;
+        if (x >= X1 && x <= X2 && y >= Y1 && y <= Y2) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * 胸部
+     */
+    private boolean isInChestArea(float x, float y) {
+        float X1 = viewWidth * 215 / 638;
+        float X2 = viewWidth * 415 / 638;
+        float Y1 = viewHeight * 230 / 1160;
+        float Y2 = viewHeight * 320 / 1160;
+        if (x >= X1 && x <= X2 && y >= Y1 && y <= Y2) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * 腹部
+     */
+    private boolean isInAbdomenArea(float x, float y) {
+        float X1 = viewWidth * 215 / 638;
+        float X2 = viewWidth * 415 / 638;
+        float Y1 = viewHeight * 320 / 1160;
+        float Y2 = viewHeight * 500 / 1160;
+        if (x >= X1 && x <= X2 && y >= Y1 && y <= Y2) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * 会阴
+     */
+    private boolean isInPerinaeumArea(float x, float y) {
+        float X1 = viewWidth * 215 / 638;
+        float X2 = viewWidth * 415 / 638;
+        float Y1 = viewHeight * 500 / 1160;
+        float Y2 = viewHeight * 590 / 1160;
+        if (x >= X1 && x <= X2 && y >= Y1 && y <= Y2) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * 手臂
+     */
+    private boolean isInArmArea(float x, float y) {
+        float leftX1 = viewWidth * 10 / 638;
+        float leftX2 = viewWidth * 215 / 638;
+        float rightX1 = viewWidth * 415 / 638;
+        float rightX2 = viewWidth * 622 / 638;
+        float Y1 = viewHeight * 230 / 1160;
+        float Y2 = viewHeight * 620 / 1160;
+        if (y >= Y1 && y <= Y2) {
+            if (x >= leftX1 && x <= leftX2) {
+                return true;
+            } else if (x >= rightX1 && x <= rightX2) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * 腿部
+     */
+    private boolean isInLegArea(float x, float y) {
+        float Y1 = viewHeight * 590 / 1160;
+        if ( y >= Y1) {
+            return true;
+        }
+        return false;
     }
 
 }

@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.rainwii.zsyy.R;
 import com.rainwii.zsyy.activity.education.EducationMainActivity;
+import com.rainwii.zsyy.activity.encyclopedia.EncyclopediaMainActivity;
 import com.rainwii.zsyy.activity.online.OnlineMainActivity;
 import com.rainwii.zsyy.activity.reservation.ReservationSetMealActivity;
 import com.rainwii.zsyy.bean.ReservationSetMeal;
@@ -73,6 +74,7 @@ public class ServiceFragment extends BaseFragment {
                 enterActivity(EducationMainActivity.class);
                 break;
             case R.id.tv_action_8:
+                enterActivity(EncyclopediaMainActivity.class);
                 break;
             case R.id.tv_action_9:
                 break;

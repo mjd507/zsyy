@@ -5,7 +5,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.rainwii.zsyy.R;
-import com.rainwii.zsyy.activity.BaseActivity;
+import com.rainwii.zsyy.activity.base.BaseActivity;
 import com.rainwii.zsyy.adapter.SymptomDiagnosisAdapter;
 
 import java.util.ArrayList;

@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margins_10"
+                android:layout_marginTop="@dimen/margins_10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/margins_5"
+                    android:layout_height="@dimen/margins_17"
+                    android:background="#fffdb55f"
+                    android:contentDescription="@string/app_name" />
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margins_10"
+                    android:layout_weight="1.0"
+                    android:text="疾病库"
+                    android:textColor="@color/text_83"
+                    android:textSize="@dimen/text_largest" />
+
+                <ImageView
+                    android:id="@+id/disease_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margins_10"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/btn_encyclopedia_search_selector" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margins_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/disease_1"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@color/bg_background"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/margins_5"
+                    android:singleLine="true"
+                    android:text="常见疾病"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/disease_2"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margins_10"
+                    android:layout_weight="1.0"
+                    android:background="@color/bg_background"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/margins_5"
+                    android:singleLine="true"
+                    android:text="发病部位"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/disease_3"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margins_10"
+                    android:layout_weight="1.0"
+                    android:background="@color/bg_background"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/margins_5"
+                    android:singleLine="true"
+                    android:text="所属科室"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:layout_margin="@dimen/margins_5"
+                android:background="@color/list_divider"
+                android:contentDescription="@string/app_name" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margins_10"
+                android:layout_marginTop="@dimen/margins_10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/margins_5"
+                    android:layout_height="@dimen/margins_17"
+                    android:background="#ff56c514"
+                    android:contentDescription="@string/app_name" />
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margins_10"
+                    android:layout_weight="1.0"
+                    android:text="药物库"
+                    android:textColor="@color/text_83"
+                    android:textSize="@dimen/text_largest" />
+
+                <ImageView
+                    android:id="@+id/drug_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margins_10"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/btn_encyclopedia_search_selector" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margins_10"
+                android:layout_marginRight="@dimen/margins_10"
+                android:layout_marginTop="@dimen/margins_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/drug_1"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@color/bg_background"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/margins_5"
+                    android:singleLine="true"
+                    android:text="解热镇痛"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/drug_2"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margins_10"
+                    android:layout_weight="1.0"
+                    android:background="@color/bg_background"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/margins_5"
+                    android:singleLine="true"
+                    android:text="感冒"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/drug_3"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margins_10"
+                    android:layout_weight="1.0"
+                    android:background="@color/bg_background"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/margins_5"
+                    android:singleLine="true"
+                    android:text="高血压"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margins_10"
+                android:layout_marginRight="@dimen/margins_10"
+                android:layout_marginTop="@dimen/margins_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/drug_4"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@color/bg_background"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/margins_5"
+                    android:singleLine="true"
+                    android:text="糖尿病"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/drug_5"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margins_10"
+                    android:layout_weight="1.0"
+                    android:background="@color/bg_background"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/margins_5"
+                    android:singleLine="true"
+                    android:text="消化不良"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/drug_6"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margins_10"
+                    android:layout_weight="1.0"
+                    android:background="@color/bg_background"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/margins_5"
+                    android:singleLine="true"
+                    android:text="化痰止咳"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margins_10"
+                android:layout_marginRight="@dimen/margins_10"
+                android:layout_marginTop="@dimen/margins_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/drug_7"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@color/bg_background"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/margins_5"
+                    android:singleLine="true"
+                    android:text="止泻"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/drug_8"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margins_10"
+                    android:layout_weight="1.0"
+                    android:background="@color/bg_background"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/margins_5"
+                    android:singleLine="true"
+                    android:text="抗过敏"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/drug_9"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margins_10"
+                    android:layout_weight="1.0"
+                    android:background="@color/bg_background"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/margins_5"
+                    android:singleLine="true"
+                    android:text="皮肤炎症"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margins_10"
+                android:layout_marginRight="@dimen/margins_10"
+                android:layout_marginTop="@dimen/margins_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/drug_10"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@color/bg_background"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/margins_5"
+                    android:singleLine="true"
+                    android:text="跌打损伤"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/drug_11"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margins_10"
+                    android:layout_weight="1.0"
+                    android:background="@color/bg_background"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/margins_5"
+                    android:singleLine="true"
+                    android:text="前列腺疾病"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/drug_12"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margins_10"
+                    android:layout_weight="1.0"
+                    android:background="@color/bg_background"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/margins_5"
+                    android:singleLine="true"
+                    android:text="心绞痛"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margins_10"
+                android:layout_marginLeft="@dimen/margins_10"
+                android:layout_marginRight="@dimen/margins_10"
+                android:layout_marginTop="@dimen/margins_10"
+                android:orientation="horizontal"
+                android:weightSum="3.0">
+
+                <TextView
+                    android:id="@+id/drug_13"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margins_20"
+                    android:layout_weight="1.0"
+                    android:background="@color/bg_background"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/margins_5"
+                    android:singleLine="true"
+                    android:text="眼科"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margins_10"
+                android:layout_marginLeft="@dimen/margins_10"
+                android:layout_marginRight="@dimen/margins_10"
+                android:layout_marginTop="@dimen/margins_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/action_1"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:drawableTop="@drawable/ic_encyclopedia_action_1"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/margins_5"
+                    android:singleLine="true"
+                    android:text="急救库"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/action_2"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margins_10"
+                    android:layout_weight="1.0"
+                    android:drawableTop="@drawable/ic_encyclopedia_action_3"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/margins_5"
+                    android:singleLine="true"
+                    android:text="化验单解读"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/action_3"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margins_10"
+                    android:layout_weight="1.0"
+                    android:drawableTop="@drawable/ic_encyclopedia_action_2"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/margins_5"
+                    android:singleLine="true"
+                    android:text="疫苗接种"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:layout_margin="@dimen/margins_5"
+                android:background="@color/list_divider"
+                android:contentDescription="@string/app_name" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margins_10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/margins_5"
+                    android:layout_height="@dimen/margins_17"
+                    android:background="#ff52b5f5"
+                    android:contentDescription="@string/app_name" />
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margins_10"
+                    android:layout_weight="1.0"
+                    android:text="小工具"
+                    android:textColor="@color/text_83"
+                    android:textSize="@dimen/text_largest" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margins_10"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/btn_encyclopedia_search_selector"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margins_10"
+                android:layout_marginRight="@dimen/margins_10"
+                android:layout_marginTop="@dimen/margins_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tool_1"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:drawableTop="@drawable/ic_encyclopedia_tool_1"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/margins_5"
+                    android:singleLine="true"
+                    android:text="乙肝自测"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/tool_2"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margins_10"
+                    android:layout_weight="1.0"
+                    android:drawableTop="@drawable/ic_encyclopedia_tool_2"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/margins_5"
+                    android:singleLine="true"
+                    android:text="预产期自测"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/tool_3"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margins_10"
+                    android:layout_weight="1.0"
+                    android:drawableTop="@drawable/ic_encyclopedia_tool_3"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/margins_5"
+                    android:singleLine="true"
+                    android:text="吸烟危害自测"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margins_10"
+                android:layout_marginRight="@dimen/margins_10"
+                android:layout_marginTop="@dimen/margins_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tool_4"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:drawableTop="@drawable/ic_encyclopedia_tool_4"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/margins_5"
+                    android:singleLine="true"
+                    android:text="BMI自测"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/tool_5"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margins_10"
+                    android:layout_weight="1.0"
+                    android:drawableTop="@drawable/ic_encyclopedia_tool_5"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/margins_5"
+                    android:singleLine="true"
+                    android:text="高血压自测"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/tool_6"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margins_10"
+                    android:layout_weight="1.0"
+                    android:drawableTop="@drawable/ic_encyclopedia_tool_6"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/margins_5"
+                    android:singleLine="true"
+                    android:text="脂肪肝自测"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margins_20"
+                android:layout_marginLeft="@dimen/margins_10"
+                android:layout_marginRight="@dimen/margins_10"
+                android:layout_marginTop="@dimen/margins_10"
+                android:orientation="horizontal"
+                android:weightSum="3.0">
+
+                <TextView
+                    android:id="@+id/tool_7"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:drawableTop="@drawable/ic_encyclopedia_tool_7"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/margins_5"
+                    android:singleLine="true"
+                    android:text="前列腺自测"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/tool_8"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margins_10"
+                    android:layout_weight="1.0"
+                    android:drawableTop="@drawable/ic_encyclopedia_tool_8"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/margins_5"
+                    android:singleLine="true"
+                    android:text="腰臀比自测"
+                    android:textColor="@color/text_38"
+                    android:textSize="@dimen/text_large" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

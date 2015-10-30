@@ -3,7 +3,7 @@ package com.rainwii.zsyy.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-public class SharedPreferencesUtils {
+public class SPUtils {
     private static final String SHARED_PREFERENCES_NAME = "config";
     private static SharedPreferences sp;
 

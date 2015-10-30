@@ -7,9 +7,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.rainwii.zsyy.R;
-import com.rainwii.zsyy.activity.BaseActivity;
+import com.rainwii.zsyy.activity.base.BaseActivity;
 import com.rainwii.zsyy.constants.Constants;
-import com.rainwii.zsyy.utils.SharedPreferencesUtils;
+import com.rainwii.zsyy.utils.SPUtils;
 
 /**
  * 描述：挂号 --> 支付页面（实时挂号）
@@ -68,7 +68,7 @@ public class RegisterPayActivity extends BaseActivity {
             tvTitle3.setTextColor(getResources().getColor(R.color.bg_title));
         } else {
         }
-        setTitleBack(SharedPreferencesUtils.getString(this, Constants.REGISTER_TYPE, ""));
+        setTitleBack(SPUtils.getString(this, Constants.REGISTER_TYPE, ""));
     }
 
     @Override

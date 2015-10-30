@@ -37,7 +37,7 @@
             android:value="L4ask0Gsk874xvLgQRGxzytz" />
 
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".activity.base.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -177,6 +177,12 @@
             android:name=".activity.education.EducationDetailActivity"
             android:screenOrientation="portrait" />
         <!-- 健康宣教 end-->
+
+        <!-- 健康百科 start-->
+        <activity
+            android:name=".activity.encyclopedia.EncyclopediaMainActivity"
+            android:screenOrientation="portrait" />
+        <!-- 健康百科 end-->
 
         <service
             android:name="com.baidu.location.f"

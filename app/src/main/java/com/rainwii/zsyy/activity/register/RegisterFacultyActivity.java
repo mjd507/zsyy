@@ -8,10 +8,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.rainwii.zsyy.R;
-import com.rainwii.zsyy.activity.BaseActivity;
+import com.rainwii.zsyy.activity.base.BaseActivity;
 import com.rainwii.zsyy.adapter.RegisterFacultyAdapter;
 import com.rainwii.zsyy.constants.Constants;
-import com.rainwii.zsyy.utils.SharedPreferencesUtils;
+import com.rainwii.zsyy.utils.SPUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -93,7 +93,7 @@ public class RegisterFacultyActivity extends BaseActivity {
             title = "手机挂号";
         }
         setTitleBackAndRight(title, R.drawable.btn_search);
-        SharedPreferencesUtils.putString(this,Constants.REGISTER_TYPE,title);
+        SPUtils.putString(this, Constants.REGISTER_TYPE, title);
     }
 
     @Override

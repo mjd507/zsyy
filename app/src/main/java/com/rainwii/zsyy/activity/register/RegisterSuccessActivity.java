@@ -6,9 +6,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.rainwii.zsyy.R;
-import com.rainwii.zsyy.activity.BaseActivity;
+import com.rainwii.zsyy.activity.base.BaseActivity;
 import com.rainwii.zsyy.constants.Constants;
-import com.rainwii.zsyy.utils.SharedPreferencesUtils;
+import com.rainwii.zsyy.utils.SPUtils;
 
 /**
  * 描述：挂号 --> 预约/挂号成功的粗略展示
@@ -45,7 +45,7 @@ public class RegisterSuccessActivity extends BaseActivity {
      * 初始化标题栏 以及 子标题栏
      */
     private void initTitleAndSubTitle() {
-        setTitleBack(SharedPreferencesUtils.getString(this, Constants.REGISTER_TYPE, ""));
+        setTitleBack(SPUtils.getString(this, Constants.REGISTER_TYPE, ""));
         llRegisterType1 = (LinearLayout) this.findViewById(R.id.ll_register_type_1);
         llRegisterType2 = (LinearLayout) this.findViewById(R.id.ll_register_type_2);
         llRegisterType3 = (LinearLayout) this.findViewById(R.id.ll_register_type_3);
