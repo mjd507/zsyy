@@ -19,7 +19,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp">
+                android:layout_height="180dp">
 
                 <android.support.v4.view.ViewPager
                     android:id="@+id/vp_shuffle"
@@ -39,13 +39,17 @@
                 android:id="@+id/gv_modules"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@color/white"
                 android:horizontalSpacing="@dimen/space_small"
                 android:listSelector="@drawable/color_gv_item_bg_selector"
                 android:numColumns="3"
                 android:padding="@dimen/space_medium"
                 android:verticalSpacing="@dimen/space_small" />
 
+            <include layout="@layout/layout_home_fragment_bottom" />
+
         </LinearLayout>
+
     </ScrollView>
 
 </LinearLayout>

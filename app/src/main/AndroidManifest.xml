@@ -37,9 +37,10 @@
             android:value="L4ask0Gsk874xvLgQRGxzytz" />
 
         <activity
-            android:name=".activity.base.MainActivity"
+            android:name=".activity.MainActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/MyIndicatorStyle">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -183,6 +184,12 @@
             android:name=".activity.encyclopedia.EncyclopediaMainActivity"
             android:screenOrientation="portrait" />
         <!-- 健康百科 end-->
+
+        <!-- 订阅 start-->
+        <activity
+            android:name=".activity.subscribe.SubscribeContentActivity"
+            android:screenOrientation="portrait" />
+        <!-- 订阅 end-->
 
         <service
             android:name="com.baidu.location.f"

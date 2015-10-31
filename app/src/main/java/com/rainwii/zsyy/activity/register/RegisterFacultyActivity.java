@@ -49,10 +49,20 @@ public class RegisterFacultyActivity extends BaseActivity {
         //模拟加载数据（根据挂号类型去加载相应的科室）
         showLoading("加载中...");
         list = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
-            list.add("口腔科门诊");
-            list.add("眼科门诊");
-        }
+        list.add("口腔科门诊");
+        list.add("眼科门诊");
+        list.add("肝炎门诊");
+        list.add("普内科门诊");
+        list.add("呼吸内科门诊");
+        list.add("心血管内科门诊");
+        list.add("神经内科门诊");
+        list.add("风湿免疫科门诊");
+        list.add("骨科门诊");
+        list.add("神经外科门诊");
+        list.add("心胸外科门诊");
+        list.add("肛肠外科门诊");
+        list.add("泌尿外科门诊");
+        list.add("整形外科门诊");
         closeLoading();
 
         RegisterFacultyAdapter roomsAdapter = new RegisterFacultyAdapter(this, list);
@@ -89,7 +99,7 @@ public class RegisterFacultyActivity extends BaseActivity {
             llRegisterType2.setVisibility(View.GONE);
             TextView tvTitle1 = (TextView) this.findViewById(R.id.tv_type_3_step_1);
             tvTitle1.setTextColor(getResources().getColor(R.color.bg_title));
-        }else{
+        } else {
             title = "手机挂号";
         }
         setTitleBackAndRight(title, R.drawable.btn_search);
@@ -103,9 +113,9 @@ public class RegisterFacultyActivity extends BaseActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Bundle bundle = new Bundle();
                 bundle.putString(Constants.REGISTER_TYPE, registerType);
-                if(registerType.equals(Constants.REGISTER_TYPE_EXPERT)){   //专家号预约 --> 选择医生
+                if (registerType.equals(Constants.REGISTER_TYPE_EXPERT)) {   //专家号预约 --> 选择医生
                     enterActivity(RegisterDoctorScheduleActivity.class, bundle);
-                }else {         //信息确认
+                } else {         //信息确认
                     bundle.putString(Constants.REGISTER_FACULTY, list.get(position));
                     enterActivity(RegisterInfoActivity.class, bundle);
                 }

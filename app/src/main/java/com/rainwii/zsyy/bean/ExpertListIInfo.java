@@ -1,11 +1,13 @@
 package com.rainwii.zsyy.bean;
 
+import java.io.Serializable;
+
 /**
  * 描述：专家排班 --> 专家列表
  * 作者 mjd
  * 日期：2015/10/26 9:38
  */
-public class ExpertListIInfo {
+public class ExpertListIInfo implements Serializable {
     private String imageUri;
     private String name;
     private String position;

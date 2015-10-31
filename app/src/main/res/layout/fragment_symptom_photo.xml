@@ -13,7 +13,7 @@
             android:layout_height="match_parent"
             android:contentDescription="@string/app_name"
             android:scaleType="fitCenter"
-            android:visibility="invisible" />
+            android:visibility="visible" />
 
         <ImageView
             android:id="@+id/iv_symptom_photo_front"

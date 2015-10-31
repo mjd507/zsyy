@@ -1,10 +1,11 @@
-package com.rainwii.zsyy.activity.base;
+package com.rainwii.zsyy.activity;
 
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.RadioGroup;
 
 import com.rainwii.zsyy.R;
+import com.rainwii.zsyy.activity.base.BaseActivity;
 import com.rainwii.zsyy.fragment.HomeFragment;
 import com.rainwii.zsyy.fragment.ServiceFragment;
 import com.rainwii.zsyy.fragment.SubscribeFragment;

@@ -35,21 +35,15 @@ public class SymptomTextFragment extends BaseFragment {
     @Override
     protected void initData() {
         list = new ArrayList<>();
-        list.add("四肢");
-        list.add("口腔");
         list.add("面部");
-        list.add("臀部");
-        list.add("腰部");
+        list.add("手臂");
+        list.add("胸部");
+        list.add("腹部");
         list.add("会阴");
-        list.add("皮肤");
-        list.add("上肢");
-        list.add("下肢");
-        list.add("下肢");
-        list.add("下肢");
-        list.add("下肢");
-        list.add("下肢");
-        list.add("下肢");
-        list.add("下肢");
+        list.add("腿阴");
+        list.add("头部");
+        list.add("腰背部");
+        list.add("臀部");
         SymptomPossibleSymptomAdapter adapter = new SymptomPossibleSymptomAdapter(getActivity(), list);
         lv.setAdapter(adapter);
     }

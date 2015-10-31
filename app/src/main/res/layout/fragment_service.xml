@@ -46,7 +46,8 @@
                     android:gravity="center_horizontal"
                     android:text="邮寄报告单"
                     android:textColor="@color/text_38"
-                    android:textSize="@dimen/text_large" />
+                    android:textSize="@dimen/text_large"
+                    android:visibility="gone" />
 
                 <!--<TextView-->
                 <!--android:id="@+id/tv_action_3"-->
@@ -92,7 +93,8 @@
                     android:gravity="center_horizontal"
                     android:text="结对医生"
                     android:textColor="@color/text_38"
-                    android:textSize="@dimen/text_large" />
+                    android:textSize="@dimen/text_large"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/tv_action_6"
@@ -138,7 +140,8 @@
                     android:gravity="center_horizontal"
                     android:text="手术动态"
                     android:textColor="@color/text_38"
-                    android:textSize="@dimen/text_large" />
+                    android:textSize="@dimen/text_large"
+                    android:visibility="gone" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.rainwii.zsyy.R;
 import com.rainwii.zsyy.activity.base.BaseActivity;
 import com.rainwii.zsyy.activity.register.RegisterInfoActivity;
+import com.rainwii.zsyy.bean.ExpertListIInfo;
 import com.rainwii.zsyy.bean.RegisterExpertInfo;
 import com.rainwii.zsyy.constants.Constants;
 import com.rainwii.zsyy.utils.SPUtils;
@@ -73,10 +74,12 @@ public class ExpertScheduleActivity extends BaseActivity {
 
     @Override
     protected void initData() {
+        ExpertListIInfo info = (ExpertListIInfo) getIntent().getExtras().getSerializable("expertListInfo");
         ivPhoto.setImageResource(R.drawable.ic_doctor_logo);
-        tvName.setText("华佗");
-        tvPosition.setText("主治医生");
-        tvSkill.setText("擅长各种疾病");
+        assert info != null;
+        tvName.setText(info.getName());
+        tvPosition.setText(info.getPosition());
+        tvSkill.setText(info.getSkill());
         tvPlace.setText("江苏省-苏州市-滨河路-1701号");
         tvFee.setText("100元");
         ivStar1.setVisibility(View.VISIBLE);

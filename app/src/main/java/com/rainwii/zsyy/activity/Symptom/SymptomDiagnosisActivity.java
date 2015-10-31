@@ -33,7 +33,7 @@ public class SymptomDiagnosisActivity extends BaseActivity {
     @Override
     protected void initData() {
         List<String> list = new ArrayList<>();
-        list.add("肢体无力");
+        list.add("乳房肥大");
         SymptomDiagnosisAdapter adapter = new SymptomDiagnosisAdapter(this, list);
         lv.setAdapter(adapter);
     }

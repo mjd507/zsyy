@@ -66,8 +66,6 @@ public class SymptomPhotoFragment extends BaseFragment implements View.OnTouchLi
                 LogUtils.e(TAG, "rootView: width:" + viewWidth + " height:" + viewHeight);
             }
         });
-        bitmapFront = ((BitmapDrawable) (ivPhotoFront.getDrawable())).getBitmap();
-        bitmapRear = ((BitmapDrawable) (ivPhotoRear.getDrawable())).getBitmap();
         return rootView;
     }
 
@@ -115,9 +113,9 @@ public class SymptomPhotoFragment extends BaseFragment implements View.OnTouchLi
     }
 
 
-    private void enterPossibleDiseaseActivity(String body) {
+    private void enterPossibleDiseaseActivity(String bodyArea) {
         Bundle bundle = new Bundle();
-        bundle.putString(Constants.BODY_AREA, body);
+        bundle.putString(Constants.BODY_AREA, bodyArea);
         enterActivity(SymptomPossibleSymptomActivity.class, bundle);
     }
 
@@ -190,27 +188,35 @@ public class SymptomPhotoFragment extends BaseFragment implements View.OnTouchLi
     public boolean onTouch(View v, MotionEvent event) {
         switch (v.getId()) {
             case R.id.iv_symptom_photo_front:
+                if (bitmapFront == null)
+                    bitmapFront = ((BitmapDrawable) (ivPhotoFront.getDrawable())).getBitmap();
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         float curX = event.getX();
                         float curY = event.getY();
-                        if (bitmapFront.getPixel((int) curX, (int) curY) == 0) {
-                            ToastUtils.showShort(getActivity(), "透明");
+                        if (curX > bitmapFront.getWidth() || bitmapFront.getPixel((int) curX, (int) curY) == 0) {
+                            ToastUtils.showShort(getActivity(), "请在人体图上点击");
                             return true;
                         }
                         LogUtils.e(TAG, "curX:" + curX + " curY:" + curY);
                         if (isInFaceArea(curX, curY)) {
                             ToastUtils.showShort(getActivity(), "面部");
+                            enterPossibleDiseaseActivity("面部");
                         } else if (isInChestArea(curX, curY)) {
                             ToastUtils.showShort(getActivity(), "胸部");
+                            enterPossibleDiseaseActivity("胸部");
                         } else if (isInAbdomenArea(curX, curY)) {
                             ToastUtils.showShort(getActivity(), "腹部");
+                            enterPossibleDiseaseActivity("腹部");
                         } else if (isInPerinaeumArea(curX, curY)) {
                             ToastUtils.showShort(getActivity(), "会阴");
+                            enterPossibleDiseaseActivity("会阴");
                         } else if (isInArmArea(curX, curY)) {
                             ToastUtils.showShort(getActivity(), "手臂");
-                        }else if(isInLegArea(curX,curY)){
+                            enterPossibleDiseaseActivity("手臂");
+                        } else if (isInLegArea(curX, curY)) {
                             ToastUtils.showShort(getActivity(), "腿部");
+                            enterPossibleDiseaseActivity("腿部");
                         }
                         break;
                     case MotionEvent.ACTION_MOVE:
@@ -220,27 +226,32 @@ public class SymptomPhotoFragment extends BaseFragment implements View.OnTouchLi
                 }
                 break;
             case R.id.iv_symptom_photo_rear:
+                if (bitmapRear == null)
+                    bitmapRear = ((BitmapDrawable) (ivPhotoRear.getDrawable())).getBitmap();
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         float curX = event.getX();
                         float curY = event.getY();
-                        if (bitmapRear.getPixel((int) curX, (int) curY) == 0) {
-                            ToastUtils.showShort(getActivity(), "透明");
+                        if (curX > bitmapRear.getWidth() || bitmapRear.getPixel((int) curX, (int) curY) == 0) {
+                            ToastUtils.showShort(getActivity(), "请在人体图上点击");
                             return true;
                         }
                         LogUtils.e(TAG, "curX:" + curX + " curY:" + curY);
                         if (isInFaceArea(curX, curY)) {
-                            ToastUtils.showShort(getActivity(), "面部");
-                        } else if (isInChestArea(curX, curY)) {
-                            ToastUtils.showShort(getActivity(), "胸部");
-                        } else if (isInAbdomenArea(curX, curY)) {
-                            ToastUtils.showShort(getActivity(), "腹部");
+                            ToastUtils.showShort(getActivity(), "头部");
+                            enterPossibleDiseaseActivity("头部");
+                        } else if (isInChestArea(curX, curY) || isInAbdomenArea(curX, curY)) {
+                            ToastUtils.showShort(getActivity(), "腰背部");
+                            enterPossibleDiseaseActivity("腰背部");
                         } else if (isInPerinaeumArea(curX, curY)) {
-                            ToastUtils.showShort(getActivity(), "会阴");
+                            ToastUtils.showShort(getActivity(), "臀部");
+                            enterPossibleDiseaseActivity("臀部");
                         } else if (isInArmArea(curX, curY)) {
                             ToastUtils.showShort(getActivity(), "手臂");
-                        }else if(isInLegArea(curX,curY)){
+                            enterPossibleDiseaseActivity("手臂");
+                        } else if (isInLegArea(curX, curY)) {
                             ToastUtils.showShort(getActivity(), "腿部");
+                            enterPossibleDiseaseActivity("腿部");
                         }
                         break;
                     case MotionEvent.ACTION_MOVE:
@@ -332,7 +343,7 @@ public class SymptomPhotoFragment extends BaseFragment implements View.OnTouchLi
      */
     private boolean isInLegArea(float x, float y) {
         float Y1 = viewHeight * 590 / 1160;
-        if ( y >= Y1) {
+        if (y >= Y1) {
             return true;
         }
         return false;
