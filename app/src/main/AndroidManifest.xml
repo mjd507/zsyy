@@ -187,6 +187,9 @@
 
         <!-- 订阅 start-->
         <activity
+            android:name=".activity.subscribe.SubscribeSpecialActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".activity.subscribe.SubscribeContentActivity"
             android:screenOrientation="portrait" />
         <!-- 订阅 end-->

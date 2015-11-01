@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.rainwii.zsyy.R;
+import com.rainwii.zsyy.activity.subscribe.SubscribeSpecialActivity;
 import com.rainwii.zsyy.adapter.SubscribeSpecialAdapter;
 import com.rainwii.zsyy.bean.SubscribeSpecial;
 
@@ -44,7 +45,7 @@ public class SubscribeSpecialFragment extends BaseFragment {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+                enterActivity(SubscribeSpecialActivity.class);
             }
         });
     }

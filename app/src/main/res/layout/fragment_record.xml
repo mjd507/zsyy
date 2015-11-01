@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/record_item_1_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margins_10"
+                android:layout_marginRight="@dimen/margins_10"
+                android:layout_marginTop="@dimen/margins_10"
+                android:background="@drawable/bg_record_main_item"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margins_10"
+                    android:drawableLeft="@drawable/ic_record_main_item_1"
+                    android:drawablePadding="@dimen/margins_20"
+                    android:gravity="center_vertical"
+                    android:text="病史"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_largest" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margins_20"
+                    android:layout_marginRight="@dimen/margins_10"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/record_item_1_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:textColor="@color/text_yellow"
+                        android:textSize="@dimen/text_large" />
+
+                    <TextView
+                        android:id="@+id/record_item_1_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margins_5"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:textColor="@color/text_83"
+                        android:textSize="@dimen/text_large" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/record_item_2_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margins_10"
+                android:layout_marginRight="@dimen/margins_10"
+                android:layout_marginTop="@dimen/margins_10"
+                android:background="@drawable/bg_record_main_item"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margins_10"
+                    android:drawableLeft="@drawable/ic_record_main_item_2"
+                    android:drawablePadding="@dimen/margins_20"
+                    android:gravity="center_vertical"
+                    android:text="检查检验"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_largest" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margins_20"
+                    android:layout_marginRight="@dimen/margins_10"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/record_item_2_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:textColor="@color/text_yellow"
+                        android:textSize="@dimen/text_large" />
+
+                    <TextView
+                        android:id="@+id/record_item_2_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margins_5"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:textColor="@color/text_83"
+                        android:textSize="@dimen/text_large" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/record_item_3_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margins_10"
+                android:layout_marginRight="@dimen/margins_10"
+                android:layout_marginTop="@dimen/margins_10"
+                android:background="@drawable/bg_record_main_item"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margins_10"
+                    android:drawableLeft="@drawable/ic_record_main_item_6"
+                    android:drawablePadding="@dimen/margins_20"
+                    android:gravity="center_vertical"
+                    android:text="院内报告"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_largest" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margins_20"
+                    android:layout_marginRight="@dimen/margins_10"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/record_item_3_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:textColor="@color/text_yellow"
+                        android:textSize="@dimen/text_large" />
+
+                    <TextView
+                        android:id="@+id/record_item_3_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margins_5"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:textColor="@color/text_83"
+                        android:textSize="@dimen/text_large" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/record_item_4_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margins_10"
+                android:layout_marginRight="@dimen/margins_10"
+                android:layout_marginTop="@dimen/margins_10"
+                android:background="@drawable/bg_record_main_item"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margins_10"
+                    android:drawableLeft="@drawable/ic_record_main_item_3"
+                    android:drawablePadding="@dimen/margins_20"
+                    android:gravity="center_vertical"
+                    android:text="服药记录"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_largest" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margins_20"
+                    android:layout_marginRight="@dimen/margins_10"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/record_item_4_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:textColor="@color/text_yellow"
+                        android:textSize="@dimen/text_large" />
+
+                    <TextView
+                        android:id="@+id/record_item_4_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margins_5"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:textColor="@color/text_83"
+                        android:textSize="@dimen/text_large" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/record_item_5_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margins_10"
+                android:layout_marginRight="@dimen/margins_10"
+                android:layout_marginTop="@dimen/margins_10"
+                android:background="@drawable/bg_record_main_item"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margins_10"
+                    android:drawableLeft="@drawable/ic_record_main_item_4"
+                    android:drawablePadding="@dimen/margins_20"
+                    android:gravity="center_vertical"
+                    android:text="不适记录"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_largest" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margins_20"
+                    android:layout_marginRight="@dimen/margins_10"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/record_item_5_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:textColor="@color/text_yellow"
+                        android:textSize="@dimen/text_large" />
+
+                    <TextView
+                        android:id="@+id/record_item_5_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margins_5"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:textColor="@color/text_83"
+                        android:textSize="@dimen/text_large" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/record_item_6_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margins_10"
+                android:layout_marginLeft="@dimen/margins_10"
+                android:layout_marginRight="@dimen/margins_10"
+                android:layout_marginTop="@dimen/margins_10"
+                android:background="@drawable/bg_record_main_item"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margins_10"
+                    android:drawableLeft="@drawable/ic_record_main_item_5"
+                    android:drawablePadding="@dimen/margins_20"
+                    android:gravity="center_vertical"
+                    android:text="服药提醒"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_largest" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margins_20"
+                    android:layout_marginRight="@dimen/margins_10"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/record_item_6_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:textColor="@color/text_yellow"
+                        android:textSize="@dimen/text_large" />
+
+                    <TextView
+                        android:id="@+id/record_item_6_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margins_5"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:textColor="@color/text_83"
+                        android:textSize="@dimen/text_large" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
