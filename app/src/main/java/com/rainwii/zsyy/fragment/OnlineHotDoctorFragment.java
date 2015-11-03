@@ -35,9 +35,11 @@ public class OnlineHotDoctorFragment extends BaseFragment {
     @Override
     protected void initData() {
         List<OnlineHotDoctor> hotDoctorList = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            hotDoctorList.add(new OnlineHotDoctor("imageuri", "范小芬", "副主任医师", "中医科", "1988年毕业于苏州大学医院院，擅长治疗各种原因引起的各种疾病", "5"));
-        }
+        hotDoctorList.add(new OnlineHotDoctor("imageuri", "范小芬", "副主任医师", "中医科", "1988年毕业于苏州大学医院院，擅长于消化内镜及肝脏穿刺等诊疗术。", "5"));
+        hotDoctorList.add(new OnlineHotDoctor("imageuri", "王　煜", "主任医师", "风湿免疫科", " 从事消化内科工作近30年，对肝胆、肠胃疾病消化道肿瘤的诊断及治疗积累了丰富的经验", "5"));
+        hotDoctorList.add(new OnlineHotDoctor("imageuri", "刘志达", "主任医师", "神经内科", "专长：糖尿病，甲状腺疾病和其他内分泌疾病的诊断和治疗。", "5"));
+        hotDoctorList.add(new OnlineHotDoctor("imageuri", "谢　莹", "主任医师", "内分泌科", "主要从事内分泌学的临床、教学与科研工作,擅长糖尿病、甲状腺疾病、痛风、肾上腺疾病等。", "5"));
+        hotDoctorList.add(new OnlineHotDoctor("imageuri", "范小芬", "副主任医师", "消化科", "擅长消化内镜的诊疗技术如食管曲张静脉的皮圈结扎术、硬化治疗术、胃肠息肉摘除术、粘膜切除术、消化道出血的急诊内镜检查术及多种内镜下止血术", "5"));
         OnlineHotDoctorAdapter adapter = new OnlineHotDoctorAdapter(getActivity(), hotDoctorList);
         lv.setAdapter(adapter);
     }

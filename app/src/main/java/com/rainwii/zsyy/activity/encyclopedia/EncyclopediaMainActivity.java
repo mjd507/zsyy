@@ -1,5 +1,6 @@
 package com.rainwii.zsyy.activity.encyclopedia;
 
+import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -84,16 +85,33 @@ public class EncyclopediaMainActivity extends BaseActivity {
 
     @Override
     protected void initData() {
-
+        disease1.setOnClickListener(this);
+        disease2.setOnClickListener(this);
+        disease3.setOnClickListener(this);
     }
 
     @Override
     protected void initListeners() {
-        diseaseSearch.setOnClickListener(this);
+
     }
 
     @Override
     protected void handleClick(View view) {
+        Bundle bundle = new Bundle();
+        switch (view.getId()) {
+            case R.id.disease_1:
+                bundle.putString("tag", "disease_1");
+                enterActivity(EncyclopediaSecondListActivity.class, bundle);
+                break;
+            case R.id.disease_2:
+                bundle.putString("tag", "disease_2");
+                enterActivity(EncyclopediaSecondListActivity.class, bundle);
+                break;
+            case R.id.disease_3:
+                bundle.putString("tag", "disease_3");
+                enterActivity(EncyclopediaSecondListActivity.class, bundle);
+                break;
+        }
 
     }
 }

@@ -50,7 +50,12 @@ public class SubscribeContentActivity extends BaseActivity {
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
                 closeLoading();
+            }
 
+            @Override
+            public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+                super.onReceivedError(view, errorCode, description, failingUrl);
+                closeLoading();
             }
 
             /**
@@ -69,7 +74,6 @@ public class SubscribeContentActivity extends BaseActivity {
 
     @Override
     protected void initListeners() {
-
     }
 
     @Override

@@ -3,10 +3,6 @@ package com.rainwii.zsyy.activity.hospital;
 import android.view.View;
 import android.widget.ImageButton;
 
-//import com.baidu.location.BDLocation;
-//import com.baidu.location.BDLocationListener;
-//import com.baidu.location.LocationClient;
-//import com.baidu.location.LocationClientOption;
 import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.MapStatus;
@@ -27,9 +23,9 @@ public class HospitalMapNavigationActivity extends BaseActivity {
     private ImageButton ibDriver;
     private ImageButton ibWalk;
 
-    // 定位相关
-//    LocationClient mLocClient;
-//    public MyLocationListener myListener = new MyLocationListener();
+//    //定位相关
+//    private LocationClient mLocClient;
+//    private MyLocationListener myListener = new MyLocationListener();
 //    private LocationMode mCurrentMode;
 //    BitmapDescriptor mCurrentMarker;
 
@@ -69,6 +65,7 @@ public class HospitalMapNavigationActivity extends BaseActivity {
 //        mLocClient.registerLocationListener(myListener);
 //        LocationClientOption option = new LocationClientOption();
 //        option.setOpenGps(true); // 打开gps
+//        option.setIsNeedAddress(true);
 //        option.setCoorType("bd09ll"); // 设置坐标类型
 //        option.setScanSpan(1000);
 //        mLocClient.setLocOption(option);
@@ -106,7 +103,7 @@ public class HospitalMapNavigationActivity extends BaseActivity {
         switch (view.getId()) {
             case R.id.ib_bus:
                 //开启交通图
-                mBaiduMap.setTrafficEnabled(true);
+//                mBaiduMap.setTrafficEnabled(true);
                 break;
             case R.id.ib_driver:
 
@@ -140,6 +137,8 @@ public class HospitalMapNavigationActivity extends BaseActivity {
 //                        location.getLongitude());
 //                MapStatusUpdate u = MapStatusUpdateFactory.newLatLng(ll);
 //                mBaiduMap.animateMapStatus(u);
+//
+//                ToastUtils.showShort(HospitalMapNavigationActivity.this,location.getAddrStr());
 //            }
 //        }
 //

@@ -56,9 +56,9 @@ public class OnlineHotDoctorDetailActivity extends BaseActivity {
         tvSkill.setText("中医科副主任医师，研究生导师，博士，擅长各种原因引起的各种疾病。周四下午专家门诊。");
 
         List<OnlineHotDoctorDetailQuestion> list = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            list.add(new OnlineHotDoctorDetailQuestion("138****421" + i, "5", "11-1" + i, "这里是患者所提出的问题", "这里是患者的评价"));
-        }
+        list.add(new OnlineHotDoctorDetailQuestion("138****4211", "5", "11-11", "夜里总是失眠，好多天了", "这个医生不错"));
+        list.add(new OnlineHotDoctorDetailQuestion("138****4212", "5", "11-12", "多吃水果和蔬菜", "谢谢医生"));
+        list.add(new OnlineHotDoctorDetailQuestion("138****4213", "5", "11-13", "经常锻炼可缓解疼痛", "知道了，谢谢"));
 
         OnlineHotDoctorDetailAdapter adapter = new OnlineHotDoctorDetailAdapter(this, list);
         lv.setAdapter(adapter);

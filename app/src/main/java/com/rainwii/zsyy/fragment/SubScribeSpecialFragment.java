@@ -35,7 +35,6 @@ public class SubscribeSpecialFragment extends BaseFragment {
         List<SubscribeSpecial> specialList = new ArrayList<>();
         specialList.add(new SubscribeSpecial("imageUri","每周孕事"));
         specialList.add(new SubscribeSpecial("imageUri","幼儿教育"));
-        specialList.add(new SubscribeSpecial("imageUri","医学前沿"));
         SubscribeSpecialAdapter adapter = new SubscribeSpecialAdapter(getActivity(),specialList);
         lv.setAdapter(adapter);
     }

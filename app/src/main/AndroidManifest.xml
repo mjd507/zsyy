@@ -183,6 +183,12 @@
         <activity
             android:name=".activity.encyclopedia.EncyclopediaMainActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.encyclopedia.EncyclopediaSecondListActivity"
+            android:screenOrientation="portrait" />
+       <activity
+            android:name=".activity.encyclopedia.EncyclopediaContentActivity"
+            android:screenOrientation="portrait" />
         <!-- 健康百科 end-->
 
         <!-- 订阅 start-->
