@@ -32,7 +32,6 @@ public class EncyclopediaSecondListActivity extends BaseActivity {
     }
 
     private void initTitle() {
-        assert tag != null;
         switch (tag) {
             case "disease_1":
                 setTitleBack("常见疾病");
@@ -42,6 +41,12 @@ public class EncyclopediaSecondListActivity extends BaseActivity {
                 break;
             case "disease_3":
                 setTitleBack("所属科室");
+                break;
+            case "drug_1":
+                setTitleBack("解热镇痛");
+                break;
+            default:
+                setTitleBack("药品");
                 break;
         }
     }
@@ -73,6 +78,16 @@ public class EncyclopediaSecondListActivity extends BaseActivity {
                 list.add("新生儿科");
                 list.add("职业病科");
                 list.add("口腔科");
+                break;
+            case "drug_1":
+                list.add("阿司匹林");
+                list.add("必理通");
+                list.add("芬必得");
+                break;
+            default:
+                list.add("阿司匹林");
+                list.add("必理通");
+                list.add("芬必得");
                 break;
         }
 

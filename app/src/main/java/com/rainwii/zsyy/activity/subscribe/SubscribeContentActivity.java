@@ -69,7 +69,7 @@ public class SubscribeContentActivity extends BaseActivity {
                 return true;
             }
         });
-        mWebView.loadUrl("http://news.163.com/15/1101/08/B7AROQFI00014JB5.html");
+        mWebView.loadUrl("http://jiankang.163.com/15/1105/07/B7L2VO0O0038002S.html");
     }
 
     @Override

@@ -88,6 +88,30 @@ public class EncyclopediaMainActivity extends BaseActivity {
         disease1.setOnClickListener(this);
         disease2.setOnClickListener(this);
         disease3.setOnClickListener(this);
+        drug1.setOnClickListener(this);
+        drug2.setOnClickListener(this);
+        drug3.setOnClickListener(this);
+        drug4.setOnClickListener(this);
+        drug5.setOnClickListener(this);
+        drug6.setOnClickListener(this);
+        drug7.setOnClickListener(this);
+        drug8.setOnClickListener(this);
+        drug9.setOnClickListener(this);
+        drug10.setOnClickListener(this);
+        drug11.setOnClickListener(this);
+        drug12.setOnClickListener(this);
+        drug13.setOnClickListener(this);
+        action1.setOnClickListener(this);
+        action2.setOnClickListener(this);
+        action3.setOnClickListener(this);
+        tool1.setOnClickListener(this);
+        tool2.setOnClickListener(this);
+        tool3.setOnClickListener(this);
+        tool4.setOnClickListener(this);
+        tool5.setOnClickListener(this);
+        tool6.setOnClickListener(this);
+        tool7.setOnClickListener(this);
+        tool8.setOnClickListener(this);
     }
 
     @Override
@@ -109,6 +133,102 @@ public class EncyclopediaMainActivity extends BaseActivity {
                 break;
             case R.id.disease_3:
                 bundle.putString("tag", "disease_3");
+                enterActivity(EncyclopediaSecondListActivity.class, bundle);
+                break;
+            case R.id.drug_1:
+                bundle.putString("tag", "drug_1");
+                enterActivity(EncyclopediaSecondListActivity.class, bundle);
+                break;
+            case R.id.drug_2:
+                bundle.putString("tag", "drug_2");
+                enterActivity(EncyclopediaSecondListActivity.class, bundle);
+                break;
+            case R.id.drug_3:
+                bundle.putString("tag", "drug_3");
+                enterActivity(EncyclopediaSecondListActivity.class, bundle);
+                break;
+            case R.id.drug_4:
+                bundle.putString("tag", "drug_4");
+                enterActivity(EncyclopediaSecondListActivity.class, bundle);
+                break;
+            case R.id.drug_5:
+                bundle.putString("tag", "drug_5");
+                enterActivity(EncyclopediaSecondListActivity.class, bundle);
+                break;
+            case R.id.drug_6:
+                bundle.putString("tag", "drug_6");
+                enterActivity(EncyclopediaSecondListActivity.class, bundle);
+                break;
+            case R.id.drug_7:
+                bundle.putString("tag", "drug_7");
+                enterActivity(EncyclopediaSecondListActivity.class, bundle);
+                break;
+            case R.id.drug_8:
+                bundle.putString("tag", "drug_8");
+                enterActivity(EncyclopediaSecondListActivity.class, bundle);
+                break;
+            case R.id.drug_9:
+                bundle.putString("tag", "drug_9");
+                enterActivity(EncyclopediaSecondListActivity.class, bundle);
+                break;
+            case R.id.drug_10:
+                bundle.putString("tag", "drug_10");
+                enterActivity(EncyclopediaSecondListActivity.class, bundle);
+                break;
+            case R.id.drug_11:
+                bundle.putString("tag", "drug_11");
+                enterActivity(EncyclopediaSecondListActivity.class, bundle);
+                break;
+            case R.id.drug_12:
+                bundle.putString("tag", "drug_12");
+                enterActivity(EncyclopediaSecondListActivity.class, bundle);
+                break;
+            case R.id.drug_13:
+                bundle.putString("tag", "drug_13");
+                enterActivity(EncyclopediaSecondListActivity.class, bundle);
+                break;
+            case R.id.action_1:
+                bundle.putString("tag", "action_1");
+                enterActivity(EncyclopediaSecondListActivity.class, bundle);
+                break;
+            case R.id.action_2:
+                bundle.putString("tag", "action_2");
+                enterActivity(EncyclopediaSecondListActivity.class, bundle);
+                break;
+            case R.id.action_3:
+                bundle.putString("tag", "action_3");
+                enterActivity(EncyclopediaSecondListActivity.class, bundle);
+                break;
+            case R.id.tool_1:
+                bundle.putString("tag", "tool_1");
+                enterActivity(EncyclopediaSecondListActivity.class, bundle);
+                break;
+            case R.id.tool_2:
+                bundle.putString("tag", "tool_2");
+                enterActivity(EncyclopediaSecondListActivity.class, bundle);
+                break;
+            case R.id.tool_3:
+                bundle.putString("tag", "tool_3");
+                enterActivity(EncyclopediaSecondListActivity.class, bundle);
+                break;
+            case R.id.tool_4:
+                bundle.putString("tag", "tool_4");
+                enterActivity(EncyclopediaSecondListActivity.class, bundle);
+                break;
+            case R.id.tool_5:
+                bundle.putString("tag", "tool_5");
+                enterActivity(EncyclopediaSecondListActivity.class, bundle);
+                break;
+            case R.id.tool_6:
+                bundle.putString("tag", "tool_6");
+                enterActivity(EncyclopediaSecondListActivity.class, bundle);
+                break;
+            case R.id.tool_7:
+                bundle.putString("tag", "tool_7");
+                enterActivity(EncyclopediaSecondListActivity.class, bundle);
+                break;
+            case R.id.tool_8:
+                bundle.putString("tag", "tool_8");
                 enterActivity(EncyclopediaSecondListActivity.class, bundle);
                 break;
         }
